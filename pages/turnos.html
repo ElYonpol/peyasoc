@@ -32,11 +32,13 @@
     <title>Portas Esquivel & Asociados - Turnos</title>
   </head>
 
-  <body>
-    <!-- HEADER -->
+  <!-- ESTRUCTURA CON GRID Y FLEXBOX -->
 
-    <header>
-      <nav class="nav">
+  <body class="grid--container">
+    <!-- HEADER CON NAVBAR -->
+
+    <header id="header">
+      <nav id="navbar">
         <div class="row">
           <div class="col">
             <a href="../index.html"
@@ -69,86 +71,84 @@
 
     <!-- MAIN -->
 
-    <div class="row--main">
-      <section id="main">
-        <div class="col--main">
-          <h1 class="display-1">
-            <div class="display-1-intro">Solicite su turno</div>
-          </h1>
-          <form action="">
-            <fieldset>
-              <legend>Por favor seleccione su preferencia para el turno</legend>
+    <section id="main">
+      <div class="col--main">
+        <h1 class="display-1">
+          <div class="display-1-intro">Solicite su turno</div>
+        </h1>
+        <form action="">
+          <fieldset>
+            <legend>Por favor seleccione su preferencia para el turno</legend>
 
+            <br />
+
+            <div>
+              <label for="turno">Seleccione su preferencia:</label>
+              <select name="turno" id="turno">
+                <option value="turno 1">Opción turno 1</option>
+                <option value="turno 1">Opción turno 2</option>
+                <option value="turno 1">Opción turno 3</option>
+                <option value="turno 1">Opción turno 4</option>
+              </select>
+            </div>
+
+            <br />
+
+            <div>
+              <label for="mensaje-turno"
+                >Déjenos su mensaje para el turno:</label
+              >
               <br />
+              <textarea
+                name="mensaje-turno"
+                id="mensaje-turno"
+                cols="30"
+                rows="10"
+                placeholder="Escriba aquí su mensaje"
+              ></textarea>
+            </div>
 
-              <div>
-                <label for="turno">Seleccione su preferencia:</label>
-                <select name="turno" id="turno">
-                  <option value="turno 1">Opción turno 1</option>
-                  <option value="turno 1">Opción turno 2</option>
-                  <option value="turno 1">Opción turno 3</option>
-                  <option value="turno 1">Opción turno 4</option>
-                </select>
-              </div>
+            <br />
 
-              <br />
+            <input type="submit" value="Enviar" />
+            <input type="reset" value="Borrar" />
+          </fieldset>
+        </form>
+      </div>
+    </section>
 
-              <div>
-                <label for="mensaje-turno"
-                  >Déjenos su mensaje para el turno:</label
-                >
-                <br />
-                <textarea
-                  name="mensaje-turno"
-                  id="mensaje-turno"
-                  cols="30"
-                  rows="10"
-                  placeholder="Escriba aquí su mensaje"
-                ></textarea>
-              </div>
+    <!-- SIDEBAR -->
 
-              <br />
-
-              <input type="submit" value="Enviar" />
-              <input type="reset" value="Borrar" />
-            </fieldset>
-          </form>
+    <section id="sidebar">
+      <div class="row--main">
+        <div class="sidebar__item">
+          <a href="servicios.html"
+            ><img src="../images/sidebar_servicios.jpg" alt="Servicios"
+          /></a>
         </div>
-      </section>
-
-      <!-- SIDEBAR -->
-
-      <section id="sidebar">
-        <div class="col--main">
-          <div class="sidebar__item">
-            <a href="servicios.html"
-              ><img src="../images/sidebar_servicios.jpg" alt="Servicios"
-            /></a>
-          </div>
-          <div class="sidebar__item">
-            <a href="turnos.html"
-              ><img src="../images/sidebar_turnos.jpg" alt="Turnos"
-            /></a>
-          </div>
-          <div class="sidebar__item">
-            <a href="profesionales.html"
-              ><img
-                src="../images/sidebar_profesionales.jpg"
-                alt="Nuestros Profesionales"
-            /></a>
-          </div>
-          <div class="sidebar__item">
-            <a href="odontotips.html"
-              ><img src="../images/sidebar_odontotips.jpg" alt="Odontotips"
-            /></a>
-          </div>
+        <div class="sidebar__item">
+          <a href="turnos.html"
+            ><img src="../images/sidebar_turnos.jpg" alt="Turnos"
+          /></a>
         </div>
-      </section>
-    </div>
+        <div class="sidebar__item">
+          <a href="profesionales.html"
+            ><img
+              src="../images/sidebar_profesionales.jpg"
+              alt="Nuestros Profesionales"
+          /></a>
+        </div>
+        <div class="sidebar__item">
+          <a href="odontotips.html"
+            ><img src="../images/sidebar_odontotips.jpg" alt="Odontotips"
+          /></a>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
 
-    <footer>
+    <footer id="footer">
       <div class="row--footer">
         <div class="footer__social">Encontranos en las redes</div>
         <div class="footer__social">

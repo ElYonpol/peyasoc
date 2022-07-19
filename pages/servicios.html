@@ -32,11 +32,13 @@
     <title>Portas Esquivel & Asociados - Nuestros Servicios</title>
   </head>
 
-  <body>
-    <!-- HEADER -->
+  <!-- ESTRUCTURA CON GRID Y FLEXBOX -->
 
-    <header>
-      <nav class="nav">
+  <body class="grid--container">
+    <!-- HEADER CON NAVBAR -->
+
+    <header id="header">
+      <nav id="navbar">
         <div class="row">
           <div class="col">
             <a href="../index.html"
@@ -69,70 +71,68 @@
 
     <!-- MAIN -->
 
-    <div class="row--main">
-      <section id="main">
-        <div class="col--main">
-          <h1 class="display-1">
-            <div class="display-1-intro">Nuestros Servicios</div>
-          </h1>
-          <nav>
-            <ul>
-              <li>Blanqueamiento</li>
-              <li>Endodoncia</li>
-              <li>Estética dental</li>
-              <li>Odontología general</li>
-              <li>Ortodoncia</li>
-              <li>Prótesis</li>
-            </ul>
-          </nav>
+    <section id="main">
+      <div class="col--main">
+        <h1 class="display-1">
+          <div class="display-1-intro">Nuestros Servicios</div>
+        </h1>
+        <nav class="nav__link">
+          <ul>
+            <li>Blanqueamiento</li>
+            <li>Endodoncia</li>
+            <li>Estética dental</li>
+            <li>Odontología general</li>
+            <li>Ortodoncia</li>
+            <li>Prótesis</li>
+          </ul>
+        </nav>
 
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/KKklWLyYC0A"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            alt="Video Odontología"
-          >
-          </iframe>
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/KKklWLyYC0A"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          alt="Video Odontología"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <!-- SIDEBAR -->
+
+    <section id="sidebar">
+      <div class="row--main">
+        <div class="sidebar__item">
+          <a href="servicios.html"
+            ><img src="../images/sidebar_servicios.jpg" alt="Servicios"
+          /></a>
         </div>
-      </section>
-
-      <!-- SIDEBAR -->
-
-      <section id="sidebar">
-        <div class="col--main">
-          <div class="sidebar__item">
-            <a href="servicios.html"
-              ><img src="../images/sidebar_servicios.jpg" alt="Servicios"
-            /></a>
-          </div>
-          <div class="sidebar__item">
-            <a href="turnos.html"
-              ><img src="../images/sidebar_turnos.jpg" alt="Turnos"
-            /></a>
-          </div>
-          <div class="sidebar__item">
-            <a href="profesionales.html"
-              ><img
-                src="../images/sidebar_profesionales.jpg"
-                alt="Nuestros Profesionales"
-            /></a>
-          </div>
-          <div class="sidebar__item">
-            <a href="odontotips.html"
-              ><img src="../images/sidebar_odontotips.jpg" alt="Odontotips"
-            /></a>
-          </div>
+        <div class="sidebar__item">
+          <a href="turnos.html"
+            ><img src="../images/sidebar_turnos.jpg" alt="Turnos"
+          /></a>
         </div>
-      </section>
-    </div>
+        <div class="sidebar__item">
+          <a href="profesionales.html"
+            ><img
+              src="../images/sidebar_profesionales.jpg"
+              alt="Nuestros Profesionales"
+          /></a>
+        </div>
+        <div class="sidebar__item">
+          <a href="odontotips.html"
+            ><img src="../images/sidebar_odontotips.jpg" alt="Odontotips"
+          /></a>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
 
-    <footer>
+    <footer id="footer">
       <div class="row--footer">
         <div class="footer__social">Encontranos en las redes</div>
         <div class="footer__social">

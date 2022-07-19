@@ -32,11 +32,13 @@
     <title>Portas Esquivel & Asociados - Odontología de Excelencia</title>
   </head>
 
-  <body>
-    <!-- HEADER -->
+  <!-- ESTRUCTURA CON GRID Y FLEXBOX -->
 
-    <header>
-      <nav class="nav">
+  <body class="grid--container">
+    <!-- HEADER CON NAVBAR -->
+
+    <header id="header">
+      <nav id="navbar">
         <div class="row">
           <div class="col">
             <a href="index.html"
@@ -75,75 +77,73 @@
 
     <!-- MAIN -->
 
-    <div class="row--main">
-      <section id="main">
-        <div class="col--main">
-          <h1 class="display-1">
-            <div class="display-1-intro">Portas Esquivel & Asociados</div>
-          </h1>
-          <div class="display-1-subtitle">Odontología de Excelencia</div>
-          <div>
-            <video
-              src="./videos/video_general.mp4"
-              width="320"
-              height="240"
-              autoplay
-              loop
-              muted
-              alt="Video Odontólogo"
-            >
-              El video no es soportado por su navegador
-            </video>
-          </div>
-          <div class="display-1-description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum
-            deserunt quidem in incidunt officia sequi, asperiores laborum ad
-            doloribus porro facilis omnis vero temporibus pariatur dolore
-            obcaecati enim amet. Dolor!
-          </div>
+    <section id="main">
+      <div class="col--main">
+        <h1 class="display-1">
+          <div class="display-1-intro">Portas Esquivel & Asociados</div>
+        </h1>
+        <div class="display-1-subtitle">Odontología de Excelencia</div>
+        <div>
+          <video
+            src="./videos/video_general.mp4"
+            width="320"
+            height="240"
+            autoplay
+            loop
+            muted
+            alt="Video Odontólogo"
+          >
+            El video no es soportado por su navegador
+          </video>
         </div>
-        <div class="col--main">
-          <p>Tipos de servicios ofrecidos</p>
-          <img
-            src="./images/main_tipos_servicios.jpg"
-            alt="Tipos de servicios ofrecidos"
-          />
+        <div class="display-1-description">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum deserunt
+          quidem in incidunt officia sequi, asperiores laborum ad doloribus
+          porro facilis omnis vero temporibus pariatur dolore obcaecati enim
+          amet. Dolor!
         </div>
-      </section>
+      </div>
+      <div class="col--main">
+        <p>Tipos de servicios ofrecidos</p>
+        <img
+          src="./images/main_tipos_servicios.jpg"
+          alt="Tipos de servicios ofrecidos"
+        />
+      </div>
+    </section>
 
-      <!-- SIDEBAR -->
+    <!-- SIDEBAR -->
 
-      <section id="sidebar">
-        <div class="col--main">
-          <div class="sidebar__item">
-            <a href="./pages/servicios.html"
-              ><img src="./images/sidebar_servicios.jpg" alt="Servicios"
-            /></a>
-          </div>
-          <div class="sidebar__item">
-            <a href="./pages/turnos.html"
-              ><img src="./images/sidebar_turnos.jpg" alt="Turnos"
-            /></a>
-          </div>
-          <div class="sidebar__item">
-            <a href="./pages/profesionales.html"
-              ><img
-                src="./images/sidebar_profesionales.jpg"
-                alt="Nuestros Profesionales"
-            /></a>
-          </div>
-          <div class="sidebar__item">
-            <a href="./pages/odontotips.html"
-              ><img src="./images/sidebar_odontotips.jpg" alt="Odontotips"
-            /></a>
-          </div>
+    <section id="sidebar">
+      <div class="row--main">
+        <div class="sidebar__item">
+          <a href="./pages/servicios.html"
+            ><img src="./images/sidebar_servicios.jpg" alt="Servicios"
+          /></a>
         </div>
-      </section>
-    </div>
+        <div class="sidebar__item">
+          <a href="./pages/turnos.html"
+            ><img src="./images/sidebar_turnos.jpg" alt="Turnos"
+          /></a>
+        </div>
+        <div class="sidebar__item">
+          <a href="./pages/profesionales.html"
+            ><img
+              src="./images/sidebar_profesionales.jpg"
+              alt="Nuestros Profesionales"
+          /></a>
+        </div>
+        <div class="sidebar__item">
+          <a href="./pages/odontotips.html"
+            ><img src="./images/sidebar_odontotips.jpg" alt="Odontotips"
+          /></a>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
 
-    <footer>
+    <footer id="footer">
       <div class="row--footer">
         <div class="footer__social">Encontranos en las redes</div>
         <div class="footer__social">

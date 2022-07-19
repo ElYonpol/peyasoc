@@ -32,11 +32,13 @@
     <title>Portas Esquivel & Asociados - Contacto</title>
   </head>
 
-  <body>
-    <!-- HEADER -->
+  <!-- ESTRUCTURA CON GRID Y FLEXBOX -->
 
-    <header>
-      <nav class="nav">
+  <body class="grid--container">
+    <!-- HEADER CON NAVBAR -->
+
+    <header id="header">
+      <nav id="navbar">
         <div class="row">
           <div class="col">
             <a href="../index.html"
@@ -69,114 +71,112 @@
 
     <!-- MAIN -->
 
-    <div class="row--main">
-      <section id="main">
-        <div class="col--main">
-          <h1 class="display-1">
-            <div class="display-1-intro">Contáctenos</div>
-          </h1>
-          <form action="">
-            <fieldset>
-              <legend>Por favor ingrese sus datos</legend>
+    <section id="main">
+      <div class="col--main">
+        <h1 class="display-1">
+          <div class="display-1-intro">Contáctenos</div>
+        </h1>
+        <form action="">
+          <fieldset>
+            <legend>Por favor ingrese sus datos</legend>
 
+            <br />
+
+            <div>
+              <label for="nombre">Nombre:</label>
+              <input
+                type="text"
+                name="nombre"
+                id="nombre"
+                placeholder="Escriba aquí su nombre"
+              />
+            </div>
+            <div>
+              <label for="apellido">Apellido:</label>
+              <input
+                type="text"
+                name="apellido"
+                id="apellido"
+                placeholder="Escriba aquí su apellido"
+              />
+            </div>
+
+            <div>
+              <label for="sexo">Escoja su género:</label>
+            </div>
+            <span>Hombre</span>
+            <input type="radio" name="sexo" value="hombre" />
+            <span>Mujer</span>
+            <input type="radio" name="sexo" value="mujer" />
+
+            <br />
+            <br />
+
+            <div>
+              <label for="obra-social">Seleccione su Obra Social:</label>
+              <select name="obra-social" id="obra-social">
+                <option value="OSDE">OSDE</option>
+                <option value="Swiss Medical">Swiss Medical</option>
+                <option value="Galeno">Galeno</option>
+                <option value="Otras">Otras</option>
+              </select>
+            </div>
+
+            <br />
+
+            <div>
+              <label for="mensaje">Déjenos su mensaje:</label>
               <br />
+              <textarea
+                name="mensaje"
+                id="mensaje"
+                cols="30"
+                rows="10"
+                placeholder="Escriba aquí su mensaje"
+              ></textarea>
+            </div>
 
-              <div>
-                <label for="nombre">Nombre:</label>
-                <input
-                  type="text"
-                  name="nombre"
-                  id="nombre"
-                  placeholder="Escriba aquí su nombre"
-                />
-              </div>
-              <div>
-                <label for="apellido">Apellido:</label>
-                <input
-                  type="text"
-                  name="apellido"
-                  id="apellido"
-                  placeholder="Escriba aquí su apellido"
-                />
-              </div>
+            <br />
 
-              <div>
-                <label for="sexo">Escoja su género:</label>
-              </div>
-              <span>Hombre</span>
-              <input type="radio" name="sexo" value="hombre" />
-              <span>Mujer</span>
-              <input type="radio" name="sexo" value="mujer" />
+            <input type="submit" value="Enviar" />
+            <input type="reset" value="Borrar" />
+          </fieldset>
+        </form>
+      </div>
+    </section>
 
-              <br />
-              <br />
+    <!-- SIDEBAR -->
 
-              <div>
-                <label for="obra-social">Seleccione su Obra Social:</label>
-                <select name="obra-social" id="obra-social">
-                  <option value="OSDE">OSDE</option>
-                  <option value="Swiss Medical">Swiss Medical</option>
-                  <option value="Galeno">Galeno</option>
-                  <option value="Otras">Otras</option>
-                </select>
-              </div>
-
-              <br />
-
-              <div>
-                <label for="mensaje">Déjenos su mensaje:</label>
-                <br />
-                <textarea
-                  name="mensaje"
-                  id="mensaje"
-                  cols="30"
-                  rows="10"
-                  placeholder="Escriba aquí su mensaje"
-                ></textarea>
-              </div>
-
-              <br />
-
-              <input type="submit" value="Enviar" />
-              <input type="reset" value="Borrar" />
-            </fieldset>
-          </form>
+    <section id="sidebar">
+      <div class="row--main">
+        <div class="sidebar__item">
+          <a href="servicios.html"
+            ><img src="../images/sidebar_servicios.jpg" alt="Servicios"
+          /></a>
         </div>
-      </section>
-
-      <!-- SIDEBAR -->
-
-      <section id="sidebar">
-        <div class="col--main">
-          <div class="sidebar__item">
-            <a href="servicios.html"
-              ><img src="../images/sidebar_servicios.jpg" alt="Servicios"
-            /></a>
-          </div>
-          <div class="sidebar__item">
-            <a href="turnos.html"
-              ><img src="../images/sidebar_turnos.jpg" alt="Turnos"
-            /></a>
-          </div>
-          <div class="sidebar__item">
-            <a href="profesionales.html"
-              ><img
-                src="../images/sidebar_profesionales.jpg"
-                alt="Nuestros Profesionales"
-            /></a>
-          </div>
-          <div class="sidebar__item">
-            <a href="odontotips.html"
-              ><img src="../images/sidebar_odontotips.jpg" alt="Odontotips"
-            /></a>
-          </div>
+        <div class="sidebar__item">
+          <a href="turnos.html"
+            ><img src="../images/sidebar_turnos.jpg" alt="Turnos"
+          /></a>
         </div>
-      </section>
-    </div>
+        <div class="sidebar__item">
+          <a href="profesionales.html"
+            ><img
+              src="../images/sidebar_profesionales.jpg"
+              alt="Nuestros Profesionales"
+          /></a>
+        </div>
+        <div class="sidebar__item">
+          <a href="odontotips.html"
+            ><img src="../images/sidebar_odontotips.jpg" alt="Odontotips"
+          /></a>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
 
-    <footer>
+    <footer id="footer">
       <div class="row--footer">
         <div class="footer__social">Encontranos en las redes</div>
         <div class="footer__social">
