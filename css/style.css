@@ -184,14 +184,18 @@ a.nav__link:hover {
 }
 
 .card {
+  display: flex;
+  flex-direction: row;
   color: #fff7ef;
   background-size: cover;
   background-position: center center;
-  padding: 10rem 0 0;
+  /*   padding: 10rem 0 0; */
   max-width: 280px;
+  height: 300px;
   border-radius: 1rem;
   overflow: hidden;
   transition: transform 500ms ease;
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 }
 
 .card--1 {
@@ -226,6 +230,7 @@ a.nav__link:hover {
 .card-content {
   padding: 1rem;
   background: linear-gradient(black, rgba(0, 0, 0, 0.5));
+  align-self: flex-end;
 }
 
 .card-content__title {
@@ -235,7 +240,8 @@ a.nav__link:hover {
 }
 
 .card-content__body {
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff7ef;
+  font-size: 0.8rem;
 }
 
 /*consultar si el mecanismo de entrada primario del usuario puede hacer hover*/
