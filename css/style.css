@@ -202,7 +202,6 @@ a.sidebar__item:hover {
   .row--main {
     flex-wrap: wrap;
     justify-content: center;
-    padding: 5px;
   }
 
   #sidebar {
