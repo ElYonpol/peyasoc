@@ -248,7 +248,7 @@ a.nav__link:hover {
 
 @media (hover) {
   .card-content {
-    transform: translateY(65%);
+    transform: translateY(70%);
     transition: transform 500ms ease;
   }
   .card:hover .card-content {
