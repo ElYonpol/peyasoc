@@ -62,7 +62,7 @@ body {
       "sidebar main"
       "footer  footer";
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: 110px auto;
+    grid-template-columns: 100px auto;
   }
 
   .row--main {
