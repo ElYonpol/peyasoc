@@ -59,6 +59,7 @@ header {
   position: sticky;
   top: 0px;
   width: 100%;
+  z-index: 1;
 }
 
 #navbar {
@@ -173,6 +174,100 @@ a.nav__link:hover {
   width: 50%;
 }
 
+/* Estilos de tarjetas */
+/* Estructura GRID responsive de las tarjetas*/
+
+.cards--container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 1rem;
+}
+
+.card {
+  color: #fff7ef;
+  background-size: cover;
+  background-position: center center;
+  padding: 10rem 0 0;
+  max-width: 280px;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 500ms ease;
+}
+
+.card--1 {
+  background-image: url(../images/blanqueamiento1.jpg);
+}
+
+.card--2 {
+  background-image: url(../images/endodoncia.jpg);
+}
+
+.card--3 {
+  background-image: url(../images/esteticadental.jpg);
+}
+
+.card--4 {
+  background-image: url(../images/odontologiagral.jpg);
+}
+
+.card--5 {
+  background-image: url(../images/ortodoncia.jpg);
+}
+
+.card--6 {
+  background-image: url(../images/protesis.jpg);
+}
+
+.card:hover,
+.card:focus-within {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 1rem;
+  background: linear-gradient(black, rgba(0, 0, 0, 0.5));
+}
+
+.card-content__title {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #fff7ef;
+}
+
+.card-content__body {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*consultar si el mecanismo de entrada primario del usuario puede hacer hover*/
+
+@media (hover) {
+  .card-content {
+    transform: translateY(65%);
+    transition: transform 500ms ease;
+  }
+  .card:hover .card-content {
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff7ef;
+  background-color: black;
+  padding: 0.2rem 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.5s ease;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #fff7ef;
+  color: black;
+}
+
 /*ESTILOS DEL SIDEBAR*/
 
 #sidebar {
@@ -187,7 +282,7 @@ a.sidebar__item:hover {
   background-color: #fff7ef;
 }
 
-/* Media query para estructura GRID en Tablets y PC*/
+/* Media query para estructura GRID de MAIN y SIDEBAR en Tablets y PC*/
 
 @media (min-width: 600px) {
   .grid--container {
