@@ -49,6 +49,8 @@ body {
     "sidebar"
     "main"
     "footer";
+  grid-template-rows: auto auto 1fr auto;
+  height: 100vh;
 }
 
 /* Media query para estructura GRID en Tablets y PC*/
@@ -59,6 +61,7 @@ body {
       "header  header"
       "sidebar main"
       "footer  footer";
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: 110px auto;
   }
 
@@ -184,6 +187,26 @@ a.nav__link:hover {
   /*border: 2px solid green; /*Esto es para guía*/
 }
 
+.image {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+}
+
+.image__main {
+  max-width: 400px;
+  width: 50%;
+}
+
+.video {
+  max-width: 560px;
+  width: 50%;
+}
+
+.video__main {
+  max-width: 320px;
+  width: 50%;
+}
+
 /*ESTILOS DEL SIDEBAR*/
 
 #sidebar {
@@ -242,6 +265,10 @@ footer {
 .fa-fontColor {
   color: #fff7ef;
   font-size: 2rem;
+}
+
+.fa-fontColor:hover {
+  color: #f88a02;
 }
 
 /* Botón flotante de WhatsApp
