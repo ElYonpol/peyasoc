@@ -62,12 +62,24 @@ header {
   z-index: 1;
 }
 
-#navbar {
+/* #navbar {
   background-image: url(../images/consultorio_header.jpg);
   background-position: center center;
   background-size: cover;
   width: 100%;
   border-radius: 4px;
+} */
+
+#bs--navbar {
+  background-image: url(../images/consultorio_header.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.navbar-toggler {
+  background-color: #fff7ef;
 }
 
 .row {
@@ -95,6 +107,7 @@ header {
   font-weight: bold;
   list-style: none;
   display: inline-block;
+  align-self: center;
   text-shadow: 2px 2px 4px black;
   /*border: 1px solid blue;*/
 }
@@ -116,10 +129,6 @@ a.nav__link:hover {
   background-image: url(../images/main_background.jpg);
   background-position: center bottom;
   background-size: cover;
-}
-
-.display-1--center {
-  text-align: center;
 }
 
 .display-1-intro {
@@ -145,6 +154,7 @@ a.nav__link:hover {
   align-items: center;
   justify-content: space-between;
   padding: 5px;
+  row-gap: 10px;
   /*   width: 100%; */
   /*   background-color: #dfe0df;
   border-radius: 4px; */
@@ -295,7 +305,7 @@ a.sidebar__item:hover {
 
 /* Media query para estructura GRID de MAIN y SIDEBAR en Tablets y PC*/
 
-@media (min-width: 600px) {
+@media (min-width: 992px) {
   .grid--container {
     grid-template-areas:
       "header  header"

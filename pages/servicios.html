@@ -29,15 +29,77 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- CSS only DE BOOTSTRAP CDN -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
     <title>Portas Esquivel & Asociados - Nuestros Servicios</title>
   </head>
 
   <!-- ESTRUCTURA CON GRID Y FLEXBOX -->
 
   <body class="grid--container">
-    <!-- HEADER CON NAVBAR -->
-
     <header id="header">
+      <!-- HEADER CON NAVBAR HECHO CON BOOTSTRAP-->
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light"
+        id="bs--navbar"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"
+            ><img
+              class="image"
+              src="../icons/icon_pe.jpg"
+              alt="Logo Portas Esquivel & Asociados"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav__list">
+              <li class="nav-item">
+                <a class="nav-link nav__link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">Servicios</li>
+              <li class="nav-item">
+                <a class="nav-link nav__link" href="turnos.html">Turnos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav__link" href="profesionales.html"
+                  >Profesionales</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav__link" href="odontotips.html"
+                  >OdontoTips</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav__link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- HEADER CON NAVBAR -->
+
+      <!-- 
       <nav id="navbar">
         <div class="row">
           <div class="col">
@@ -68,16 +130,175 @@
           </div>
         </div>
       </nav>
+      -->
     </header>
 
     <!-- MAIN -->
 
     <section id="main">
       <div class="col--main">
-        <h1 class="display-1 display-1--center">
+        <h1 class="display-1">
           <div class="display-1-intro">Nuestros Servicios</div>
         </h1>
+
+        <!-- CARDS con BOOTSTRAP PARA LOS SERVICIOS  -->
+
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide w-25"
+          data-bs-ride="carousel"
+          style="text-shadow: 2px 2px 4px black; min-width: 350px"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Blanqueamiento"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Endodoncia"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Estética dental"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="3"
+              aria-label="Odontología general"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="4"
+              aria-label="Ortodoncia"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="5"
+              aria-label="Prótesis"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="../images/blanqueamiento1.jpg"
+                class="d-block w-100"
+                alt="Blanqueamiento"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Blanqueamiento</h5>
+                <p>
+                  Tratamientos especializados para lograr una sonrisa radiante y
+                  sana.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../images/endodoncia.jpg"
+                class="d-block w-100"
+                alt="Endodoncia"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Endodoncia</h5>
+                <p>
+                  La mejor tecnología y aplicaciones a la solución de
+                  tratamientos de conducto.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../images/esteticadental.jpg"
+                class="d-block w-100"
+                alt="Estética dental"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Estética dental</h5>
+                <p>
+                  La estética dental incluye una serie de tratamientos
+                  destinados a conseguir una sonrisa perfecta.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../images/odontologiagral.jpg"
+                class="d-block w-100"
+                alt="Odontología general"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Odontología general</h5>
+                <p>
+                  La odontología trata principalmente el diagnóstico,
+                  tratamiento y prevención de enfermedades orales.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../images/ortodoncia.jpg"
+                class="d-block w-100"
+                alt="Ortodoncia"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Ortodoncia</h5>
+                <p>
+                  La ortodoncia es una rama de la odontología que estudia,
+                  previene y corrige anomalías de posición tanto óseas como
+                  dentales.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../images/protesis.jpg"
+                class="d-block w-100"
+                alt="Prótesis"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Prótesis</h5>
+                <p>
+                  En nuestra clínica queremos dar la mejor solución a cada caso
+                  que se presenta para poder disfrutar de una masticación
+                  adecuada.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
         <!-- CARDS PARA LOS SERVICIOS  -->
+        <!-- 
         <div class="cards--container">
           <div class="card card--1">
             <div class="card-content">
@@ -161,6 +382,7 @@
             </div>
           </div>
         </div>
+        -->
       </div>
     </section>
 
@@ -234,5 +456,13 @@
       </div>
       -->
     </footer>
+
+    <!-- JavaScript Bundle with Popper de BOOTSTRAP -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
