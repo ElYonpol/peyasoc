@@ -259,7 +259,8 @@ a.nav__link:hover {
   font-size: 0.8rem;
 }
 
-/*consultar si el mecanismo de entrada primario del usuario puede hacer hover*/
+/*consultar si el mecanismo de entrada primario del usuario
+puede hacer hover*/
 
 @media (hover) {
   .card-content {
