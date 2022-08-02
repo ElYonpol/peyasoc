@@ -1,0 +1,20 @@
+{
+  "name": "sitio-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --watch scss/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElYonpol/peyasoc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElYonpol/peyasoc/issues"
+  },
+  "homepage": "https://github.com/ElYonpol/peyasoc#readme"
+}
