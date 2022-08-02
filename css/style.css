@@ -136,6 +136,7 @@ a.nav__link:hover {
   font-size: 2.5rem;
   font-weight: 700;
   text-shadow: 2px 2px 4px #fff7ef;
+  text-align: center;
 }
 
 .display-1-subtitle {
@@ -152,7 +153,7 @@ a.nav__link:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 5px;
   row-gap: 10px;
   /*   width: 100%; */
@@ -189,6 +190,13 @@ a.nav__link:hover {
 }
 
 /* Estilos de tarjetas */
+
+/* Escondo el carrousel para vista Mobile*/
+
+#carouselExampleCaptions {
+  display: none;
+}
+
 /* Estructura GRID responsive de las tarjetas*/
 
 .cards--container {
@@ -259,7 +267,8 @@ a.nav__link:hover {
   font-size: 0.8rem;
 }
 
-/*consultar si el mecanismo de entrada primario del usuario puede hacer hover*/
+/*consultar si el mecanismo de entrada primario del usuario
+puede hacer hover*/
 
 @media (hover) {
   .card-content {
@@ -306,6 +315,22 @@ a.sidebar__item:hover {
 /* Media query para estructura GRID de MAIN y SIDEBAR en Tablets y PC*/
 
 @media (min-width: 992px) {
+  /* Escondo las tarjetas para vista Tablets y PC*/
+  .cards--container {
+    display: none;
+  }
+
+  /* Muestro el carrousel para vista Tablets y PC*/
+
+  #carouselExampleCaptions {
+    display: inline-block;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    text-shadow: 2px 2px 4px black;
+  }
+
   .grid--container {
     grid-template-areas:
       "header  header"
