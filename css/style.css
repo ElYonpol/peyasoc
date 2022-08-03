@@ -326,8 +326,10 @@ a.sidebar__item:hover {
     display: inline-block;
   }
 
+  .carousel-control-next-icon,
   .carousel-control-prev-icon {
-    text-shadow: 2px 2px 4px black;
+    /* text-shadow: 2px 2px 4px black; */
+    filter: drop-shadow(2px 2px 4px rgb(0 0 0 / 1));
   }
 
   .grid--container {
