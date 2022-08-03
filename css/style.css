@@ -78,8 +78,9 @@ header {
   border-radius: 4px;
 }
 
-.navbar-toggler {
-  background-color: #fff7ef;
+.navbar-toggler,
+.navbar-toggler-icon {
+  filter: drop-shadow(2px 2px 3px rgb(255, 255, 255));
 }
 
 .row {
@@ -156,9 +157,6 @@ a.nav__link:hover {
   justify-content: space-around;
   padding: 5px;
   row-gap: 10px;
-  /*   width: 100%; */
-  /*   background-color: #dfe0df;
-  border-radius: 4px; */
   /*border: 2px solid black; /*Esto es para guía*/
 }
 
@@ -328,7 +326,6 @@ a.sidebar__item:hover {
 
   .carousel-control-next-icon,
   .carousel-control-prev-icon {
-    /* text-shadow: 2px 2px 4px black; */
     filter: drop-shadow(2px 2px 4px rgb(0 0 0 / 1));
   }
 
