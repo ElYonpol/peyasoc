@@ -80,7 +80,7 @@ header {
 
 .navbar-toggler,
 .navbar-toggler-icon {
-  filter: drop-shadow(2px 2px 3px rgb(255, 255, 255));
+  filter: drop-shadow(2px 2px 3px rgb(255, 255, 255, 0.8));
 }
 
 .row {
