@@ -40,7 +40,7 @@ header {
 
 .nav__list li {
     margin-left: 1.5rem;
-    color: #f88a02;
+    color: $color-naranja-logo;
     text-transform: uppercase;
     font-weight: bold;
     list-style: none;
@@ -51,12 +51,12 @@ header {
 }
 
 .nav__link {
-    color: #fff7ef;
+    color: $color-cremita;
     text-decoration: none;
     font-weight: bold;
 }
 
 a.nav__link:hover {
-    color: #f85d5a;
+    color: $color-coral-resaltado;
     text-shadow: 2px 2px 4px #6f756b;
 }

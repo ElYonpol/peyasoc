@@ -10,7 +10,7 @@
     color: #475681;
     font-size: 2.5rem;
     font-weight: 700;
-    text-shadow: 2px 2px 4px #fff7ef;
+    text-shadow: 2px 2px 4px $color-cremita;
     text-align: center;
 }
 
@@ -38,6 +38,7 @@
     display: flex;
     flex-direction: column;
     padding: 5px;
+    text-align: center;
     /*border: 2px solid green; /*Esto es para guía*/
 }
 
@@ -49,6 +50,7 @@
 .image__main {
     max-width: 400px;
     width: 50%;
+    align-self: center;
 }
 
 .video {
@@ -81,7 +83,7 @@
 .card {
     display: flex;
     flex-direction: row;
-    color: #fff7ef;
+    color: $color-cremita;
     background-size: cover;
     background-position: center center;
     /*   padding: 10rem 0 0; */
@@ -131,16 +133,16 @@
 .card-content__title {
     font-weight: 700;
     text-decoration: underline;
-    text-decoration-color: #fff7ef;
+    text-decoration-color: $color-cremita;
 }
 
 .card-content__body {
-    color: #fff7ef;
+    color: $color-cremita;
     font-size: 0.8rem;
 }
 
 /*consultar si el mecanismo de entrada primario del usuario
-  puede hacer hover*/
+puede hacer hover*/
 
 @media (hover) {
     .card-content {
@@ -158,7 +160,7 @@
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
-    color: #fff7ef;
+    color: $color-cremita;
     background-color: black;
     padding: 0.2rem 1rem;
     border-radius: 0.25rem;
@@ -167,7 +169,7 @@
 
 .button:hover,
 .button:focus {
-    background-color: #fff7ef;
+    background-color: $color-cremita;
     color: black;
 }
 
@@ -221,13 +223,13 @@ select {
 .btn--submit__contact {
     padding: 19px 39px 18px 39px;
     color: #fff;
-    background-color: #f88a02;
+    background-color: $color-naranja-logo;
     font-size: 18px;
     text-align: center;
     font-style: normal;
     border-radius: 5px;
     width: 100%;
-    border: 1px solid #f85d5a;
+    border: 1px solid $color-coral-resaltado;
     border-width: 1px 1px 3px;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
     margin-bottom: 10px;
@@ -254,7 +256,7 @@ label.light {
 }
 
 .number {
-    background-color: #f88a02;
+    background-color: $color-naranja-logo;
     color: #fff;
     height: 30px;
     width: 30px;
