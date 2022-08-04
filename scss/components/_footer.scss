@@ -1,0 +1,64 @@
+/*ESTILOS DEL FOOTER*/
+
+footer {
+    background-color: #6f756b;
+    width: 100%;
+}
+
+.row--footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0px;
+    width: 100%;
+    /*border: 2px solid black; /*Esto es para guía*/
+}
+
+.footer__social {
+    color: #fff7ef;
+    text-align: center;
+    padding: 5px;
+}
+
+.footer__bottom__copyright {
+    color: #fff7ef;
+    text-align: center;
+    padding: 5px;
+}
+
+.footer__bottom__copyright a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff7ef;
+}
+
+.footer__bottom__copyright a:hover {
+    transition: background-color 0.5s;
+    color: #f85d5a;
+    background-color: #fff7ef;
+}
+
+/* Íconos Redes Sociales */
+.fa-fontColor {
+    color: #fff7ef;
+    font-size: 2rem;
+}
+
+.fa-fontColor:hover {
+    color: #f88a02;
+}
+
+/* Botón flotante de WhatsApp
+.fa-whatsapp {
+    font-size: 45px;
+    color: white;
+    background-color: green;
+    border-radius: 50px;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    position: fixed;
+}*/

@@ -1,0 +1,68 @@
+/*ESTILOS DEL SIDEBAR*/
+
+#sidebar {
+    background-image: linear-gradient(to right, #dfe0df, #6f756b);
+    border-radius: 4px;
+}
+
+a.sidebar__item:hover {
+    /*Ver qué estilo le pongo*/
+    transition: background-color 0.5s;
+    color: #f85d5a;
+    background-color: #fff7ef;
+}
+
+/* Media query para estructura GRID de MAIN y SIDEBAR en Tablets y PC*/
+
+@media (min-width: 992px) {
+
+    /* Escondo las tarjetas para vista Tablets y PC*/
+    .cards--container {
+        display: none;
+    }
+
+    /* Muestro el carrousel para vista Tablets y PC*/
+
+    #carouselExampleCaptions {
+        display: inline-block;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        filter: drop-shadow(2px 2px 4px rgb(0 0 0 / 1));
+    }
+
+    .grid--container {
+        grid-template-areas:
+            "header  header"
+            "sidebar main"
+            "footer  footer";
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 100px auto;
+    }
+
+    .row--main {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #sidebar {
+        background-image: linear-gradient(to bottom, #dfe0df, #6f756b);
+    }
+
+    .display-1--center {
+        text-align: inherit;
+    }
+
+    .display-1-intro {
+        font-size: 3rem;
+    }
+
+    .display-1-subtitle {
+        font-size: 2rem;
+    }
+
+    .display-1-description {
+        font-size: 1.4rem;
+    }
+}

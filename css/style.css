@@ -1,5 +1,5 @@
+@charset "UTF-8";
 /*ESTILOS GENERALES*/
-
 /* Reset CSS */
 * {
   margin: 0;
@@ -13,14 +13,12 @@ html {
 }
 
 /*ESTILOS DEL BODY*/
-
 body {
   font-family: "Montserrat", sans-serif;
   /*   min-height: 100%; */
 }
 
 /* Armado de la estructura con GRID Mobile first*/
-
 .grid--container > * {
   box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
   border-radius: 4px;
@@ -44,31 +42,18 @@ body {
 
 .grid--container {
   display: grid;
-  grid-template-areas:
-    "header"
-    "sidebar"
-    "main"
-    "footer";
+  grid-template-areas: "header" "sidebar" "main" "footer";
   grid-template-rows: auto auto 1fr auto;
   height: 100vh;
 }
 
 /*ESTILOS DEL HEADER*/
-
 header {
   position: sticky;
   top: 0px;
   width: 100%;
   z-index: 1;
 }
-
-/* #navbar {
-  background-image: url(../images/consultorio_header.jpg);
-  background-position: center center;
-  background-size: cover;
-  width: 100%;
-  border-radius: 4px;
-} */
 
 #bs--navbar {
   background-image: url(../images/consultorio_header.jpg);
@@ -80,7 +65,7 @@ header {
 
 .navbar-toggler,
 .navbar-toggler-icon {
-  filter: drop-shadow(2px 2px 3px rgb(255, 255, 255, 0.8));
+  filter: drop-shadow(2px 2px 3px rgba(255, 255, 255, 0.8));
 }
 
 .row {
@@ -125,7 +110,6 @@ a.nav__link:hover {
 }
 
 /*ESTILOS DEL MAIN*/
-
 #main {
   background-image: url(../images/main_background.jpg);
   background-position: center bottom;
@@ -188,15 +172,12 @@ a.nav__link:hover {
 }
 
 /* Estilos de tarjetas */
-
 /* Escondo el carrousel para vista Mobile*/
-
 #carouselExampleCaptions {
   display: none;
 }
 
 /* Estructura GRID responsive de las tarjetas*/
-
 .cards--container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -266,8 +247,7 @@ a.nav__link:hover {
 }
 
 /*consultar si el mecanismo de entrada primario del usuario
-puede hacer hover*/
-
+  puede hacer hover*/
 @media (hover) {
   .card-content {
     transform: translateY(70%);
@@ -278,7 +258,6 @@ puede hacer hover*/
     transition-delay: 500ms;
   }
 }
-
 .button {
   cursor: pointer;
   display: inline-block;
@@ -297,7 +276,6 @@ puede hacer hover*/
 }
 
 /*ESTILOS DEL MAIN -- Formularios*/
-
 form {
   max-width: 350px;
   margin: 10px auto;
@@ -306,16 +284,16 @@ form {
   border-radius: 8px;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
+input[type=text],
+input[type=password],
+input[type=date],
+input[type=datetime],
+input[type=email],
+input[type=number],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
 textarea,
 select {
   background: rgba(255, 255, 255, 0.1);
@@ -331,15 +309,18 @@ select {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   margin-bottom: 30px;
 }
-input[type="radio"],
-input[type="checkbox"] {
+
+input[type=radio],
+input[type=checkbox] {
   margin: 0 4px 8px 0;
 }
+
 select {
   padding: 6px;
   height: 32px;
   border-radius: 2px;
 }
+
 .btn--submit__contact {
   padding: 19px 39px 18px 39px;
   color: #fff;
@@ -354,22 +335,27 @@ select {
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
   margin-bottom: 10px;
 }
+
 fieldset {
   margin-bottom: 30px;
   border: none;
 }
+
 legend {
   font-size: 1.4em;
   margin-bottom: 10px;
 }
+
 label {
   display: block;
   margin-bottom: 8px;
 }
+
 label.light {
   font-weight: 300;
   display: inline;
 }
+
 .number {
   background-color: #f88a02;
   color: #fff;
@@ -385,7 +371,6 @@ label.light {
 }
 
 /*ESTILOS DEL SIDEBAR*/
-
 #sidebar {
   background-image: linear-gradient(to right, #dfe0df, #6f756b);
   border-radius: 4px;
@@ -399,61 +384,45 @@ a.sidebar__item:hover {
 }
 
 /* Media query para estructura GRID de MAIN y SIDEBAR en Tablets y PC*/
-
 @media (min-width: 992px) {
   /* Escondo las tarjetas para vista Tablets y PC*/
   .cards--container {
     display: none;
   }
-
   /* Muestro el carrousel para vista Tablets y PC*/
-
   #carouselExampleCaptions {
     display: inline-block;
   }
-
   .carousel-control-next-icon,
-  .carousel-control-prev-icon {
-    filter: drop-shadow(2px 2px 4px rgb(0 0 0 / 1));
+.carousel-control-prev-icon {
+    filter: drop-shadow(2px 2px 4px rgb(0, 0, 0));
   }
-
   .grid--container {
-    grid-template-areas:
-      "header  header"
-      "sidebar main"
-      "footer  footer";
+    grid-template-areas: "header  header" "sidebar main" "footer  footer";
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100px auto;
   }
-
   .row--main {
     flex-wrap: wrap;
     justify-content: center;
   }
-
   #sidebar {
     background-image: linear-gradient(to bottom, #dfe0df, #6f756b);
   }
-
   .display-1--center {
     text-align: inherit;
   }
-
   .display-1-intro {
     font-size: 3rem;
   }
-
   .display-1-subtitle {
     font-size: 2rem;
   }
-
   .display-1-description {
     font-size: 1.4rem;
   }
 }
-
 /*ESTILOS DEL FOOTER*/
-
 footer {
   background-color: #6f756b;
   width: 100%;
@@ -504,15 +473,17 @@ footer {
 
 /* Botón flotante de WhatsApp
 .fa-whatsapp {
-  font-size: 45px;
-  color: white;
-  background-color: green;
-  border-radius: 50px;
-  width: 55px;
-  height: 55px;
-  text-align: center;
-  line-height: 55px;
-  bottom: 30px;
-  right: 30px;
-  position: fixed;
+    font-size: 45px;
+    color: white;
+    background-color: green;
+    border-radius: 50px;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    position: fixed;
 }*/
+
+/*# sourceMappingURL=style.css.map */
