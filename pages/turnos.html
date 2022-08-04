@@ -144,46 +144,38 @@
         </h1>
         <form action="">
           <fieldset>
-            <legend>Por favor seleccione su preferencia para el turno</legend>
+            <legend>
+              <span class="number">1</span>Por favor seleccione su preferencia
+              para el turno
+            </legend>
 
             <br />
 
             <div>
-              <label for="turno">Seleccione su preferencia:</label>
+              <label for="turno">Seleccione su opción:</label>
 
               <!-- MENÚ DESPLEGABLE CON BOOTSTRAP -->
               <select
                 class="form-select w-25"
                 aria-label="Default select example"
-                style="min-width: 350px"
+                style="min-width: 300px"
               >
                 <option selected>Ver más opciones</option>
                 <option value="1">Opción turno 1</option>
                 <option value="2">Opción turno 2</option>
                 <option value="3">Opción turno 3</option>
               </select>
-
-              <!-- 
-              <select name="turno" id="turno">
-                <option value="turno 1">Opción turno 1</option>
-                <option value="turno 1">Opción turno 2</option>
-                <option value="turno 1">Opción turno 3</option>
-                <option value="turno 1">Opción turno 4</option>
-              </select>
-              -->
             </div>
 
-            <br />
-
             <div>
-              <label for="mensaje-turno"
-                >Déjenos su mensaje para el turno:</label
-              >
-              <br />
+              <legend>
+                <span class="number">2</span>Déjenos su mensaje para el turno:
+              </legend>
+
               <br />
 
               <!-- TEXTAREA CON BOOTSTRAP -->
-              <div class="mb-3 w-25" style="min-width: 350px">
+              <div class="mb-3 w-25" style="min-width: 300px">
                 <label for="exampleFormControlInput1" class="form-label"
                   >Dirección de correo electrónico</label
                 >
@@ -194,33 +186,20 @@
                   placeholder="nombre@ejemplo.com.ar"
                 />
               </div>
-              <div class="mb-3 w-25" style="min-width: 350px">
+              <div class="mb-3 w-25" style="min-width: 300px">
                 <label for="exampleFormControlTextarea1" class="form-label"
-                  >Escriba aquí su mensaje</label
+                  >Mensaje</label
                 >
                 <textarea
                   class="form-control"
                   id="exampleFormControlTextarea1"
-                  rows="3"
+                  rows="4"
+                  placeholder="Escriba aquí su mensaje"
                 ></textarea>
               </div>
-
-              <!-- 
-              <br />
-              <textarea
-                name="mensaje-turno"
-                id="mensaje-turno"
-                cols="30"
-                rows="10"
-                placeholder="Escriba aquí su mensaje"
-              ></textarea>
-              -->
             </div>
 
-            <br />
-
-            <input type="submit" value="Enviar" />
-            <input type="reset" value="Borrar" />
+            <button class="btn--submit__contact" type="submit">Enviar</button>
           </fieldset>
         </form>
       </div>

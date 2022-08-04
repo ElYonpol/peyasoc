@@ -140,6 +140,43 @@
         <h1 class="display-1">
           <div class="display-1-intro">Contáctenos</div>
         </h1>
+
+        <!-- FORM nuevo formato -->
+        <form action="">
+          <fieldset>
+            <legend><span class="number">1</span>Ingrese sus datos</legend>
+            <label for="firstname">Nombre:</label>
+            <input type="text" id="firstname" name="user_firstname" placeholder="Escriba aquí su nombre">
+        
+            <label for="lastname">Apellido:</label>
+            <input type="text" id="lastname" name="user_lastname" placeholder="Escriba aquí su apellido">
+            
+            <label for="contactnumber">N° de teléfono:</label>
+            <input type="text" id="contactno" name="user_number" placeholder="ej. (011)-15-1234-5678">
+          </fieldset>
+          
+          <fieldset>
+            <legend>
+              <span class="number">2</span>Información adicional</legend>
+            <label>Escoja su género:</label>
+            <input type="radio" name="sexo" value="male">Hombre<br>
+            <input type="radio" name="sexo" value="female">Mujer</br>
+            </br>
+            <label for="mensaje">Déjenos su mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escriba aquí su mensaje"></textarea>
+            <label for="obra_social">Seleccione su Obra Social:</label>
+            <select id="obra_social" name="obra_social">
+              <option value="OSDE">OSDE</option>
+              <option value="Swiss Medical">Swiss Medical</option>
+              <option value="Galeno">Galeno</option>
+              <option value="Otras">Otras</option>       
+            </select>
+            <button class="btn--submit__contact" type="submit">Enviar</button>
+          </fieldset>
+        </form>
+
+        <!-- FORM formato anterior -->
+        <!-- 
         <form action="">
           <fieldset>
             <legend>Por favor ingrese sus datos</legend>
@@ -206,6 +243,7 @@
             <input type="reset" value="Borrar" />
           </fieldset>
         </form>
+        -->
       </div>
     </section>
 
