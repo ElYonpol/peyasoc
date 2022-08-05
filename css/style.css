@@ -139,6 +139,7 @@ a.nav__link:hover {
   display: flex;
   flex-direction: column;
   padding: 5px;
+  align-items: center;
   /*border: 2px solid green;  /*Esto es para guía*/
 }
 
@@ -149,18 +150,14 @@ a.nav__link:hover {
 
 .image__main {
   max-width: 400px;
-  width: 50%;
-  align-self: center;
 }
 
 .video {
   max-width: 560px;
-  width: 50%;
 }
 
 .video__main {
   max-width: 320px;
-  width: 50%;
 }
 
 /* Estilos de tarjetas */
