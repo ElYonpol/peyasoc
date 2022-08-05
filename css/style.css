@@ -69,6 +69,10 @@ header {
   filter: invert(73%) sepia(37%) saturate(6944%) hue-rotate(359deg) brightness(97%) contrast(100%) drop-shadow(2px 2px 3px rgba(255, 255, 255, 0.8));
 }
 
+.logo_texto {
+  max-width: 100%;
+}
+
 .row {
   display: flex;
   flex-direction: row;

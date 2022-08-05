@@ -22,6 +22,12 @@ header {
 
 }
 
+.logo_texto {
+    max-width: 100%
+        /* 362px */
+    ;
+}
+
 .row {
     display: flex;
     flex-direction: row;
