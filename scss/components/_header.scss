@@ -15,9 +15,11 @@ header {
     border-radius: 4px;
 }
 
-.navbar-toggler,
-.navbar-toggler-icon {
-    filter: drop-shadow(2px 2px 3px rgb(255, 255, 255, 0.8));
+.navbar-toggler {
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, 0.55);
+    filter: invert(73%) sepia(37%) saturate(6944%) hue-rotate(359deg) brightness(97%) contrast(100%) drop-shadow(2px 2px 3px rgb(255, 255, 255, 0.8));
+
 }
 
 .row {

@@ -6,40 +6,32 @@
     background-size: cover;
 }
 
-.display-1-intro {
-    color: #475681;
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px $color-cremita;
+.display-1 {
     text-align: center;
-}
 
-.display-1-subtitle {
-    font-size: 1.5rem;
-    font-weight: 400;
-}
+    &-intro {
+        color: #475681;
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px $color-cremita;
+    }
 
-.display-1-description {
-    font-size: 1rem;
-    padding-bottom: 5px;
-}
+    &-subtitle {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
 
-.row--main {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding: 5px;
-    row-gap: 10px;
-    /*border: 2px solid black; /*Esto es para guía*/
+    &-description {
+        font-size: 1rem;
+        padding-bottom: 5px;
+    }
 }
 
 .col--main {
     display: flex;
     flex-direction: column;
     padding: 5px;
-    text-align: center;
-    /*border: 2px solid green; /*Esto es para guía*/
+    /*border: 2px solid green;  /*Esto es para guía*/
 }
 
 .image {

@@ -63,9 +63,10 @@ header {
   border-radius: 4px;
 }
 
-.navbar-toggler,
-.navbar-toggler-icon {
-  filter: drop-shadow(2px 2px 3px rgba(255, 255, 255, 0.8));
+.navbar-toggler {
+  border-width: 2px;
+  border-color: rgba(0, 0, 0, 0.55);
+  filter: invert(73%) sepia(37%) saturate(6944%) hue-rotate(359deg) brightness(97%) contrast(100%) drop-shadow(2px 2px 3px rgba(255, 255, 255, 0.8));
 }
 
 .row {
@@ -116,40 +117,29 @@ a.nav__link:hover {
   background-size: cover;
 }
 
+.display-1 {
+  text-align: center;
+}
 .display-1-intro {
   color: #475681;
   font-size: 2.5rem;
   font-weight: 700;
   text-shadow: 2px 2px 4px #fff7ef;
-  text-align: center;
 }
-
 .display-1-subtitle {
   font-size: 1.5rem;
   font-weight: 400;
 }
-
 .display-1-description {
   font-size: 1rem;
   padding-bottom: 5px;
-}
-
-.row--main {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  padding: 5px;
-  row-gap: 10px;
-  /*border: 2px solid black; /*Esto es para guía*/
 }
 
 .col--main {
   display: flex;
   flex-direction: column;
   padding: 5px;
-  text-align: center;
-  /*border: 2px solid green; /*Esto es para guía*/
+  /*border: 2px solid green;  /*Esto es para guía*/
 }
 
 .image {
@@ -378,6 +368,16 @@ label.light {
   border-radius: 4px;
 }
 
+.row--main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+  row-gap: 10px;
+  /*border: 2px solid black; /*Esto es para guía*/
+}
+
 a.sidebar__item:hover {
   /*Ver qué estilo le pongo*/
   transition: background-color 0.5s;
@@ -410,9 +410,6 @@ a.sidebar__item:hover {
   }
   #sidebar {
     background-image: linear-gradient(to bottom, #dfe0df, #6f756b);
-  }
-  .display-1--center {
-    text-align: inherit;
   }
   .display-1-intro {
     font-size: 3rem;
