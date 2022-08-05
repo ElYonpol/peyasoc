@@ -388,6 +388,9 @@ a.sidebar__item:hover {
   .cards--container {
     display: none;
   }
+  .logo_texto {
+    display: none;
+  }
   /* Muestro el carrousel para vista Tablets y PC*/
   #carouselExampleCaptions {
     display: inline-block;
