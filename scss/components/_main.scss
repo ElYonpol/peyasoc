@@ -31,25 +31,24 @@
     display: flex;
     flex-direction: column;
     padding: 5px;
-    align-items: center;
     /*border: 2px solid green;  /*Esto es para guía*/
 }
 
 .image {
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
     border-radius: 4px;
-}
 
-.image__main {
-    max-width: 400px;
+    &__main {
+        max-width: 400px;
+    }
 }
 
 .video {
     max-width: 560px;
-}
 
-.video__main {
-    max-width: 320px;
+    &__main {
+        max-width: 320px;
+    }
 }
 
 /* Estilos de tarjetas */
@@ -75,57 +74,56 @@
     color: $color-cremita;
     background-size: cover;
     background-position: center center;
-    /*   padding: 10rem 0 0; */
     max-width: 280px;
     height: 300px;
     border-radius: 1rem;
     overflow: hidden;
     transition: transform 500ms ease;
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+
+    &--1 {
+        background-image: url(../images/blanqueamiento1.jpg);
+    }
+
+    &--2 {
+        background-image: url(../images/endodoncia.jpg);
+    }
+
+    &--3 {
+        background-image: url(../images/esteticadental.jpg);
+    }
+
+    &--4 {
+        background-image: url(../images/odontologiagral.jpg);
+    }
+
+    &--5 {
+        background-image: url(../images/ortodoncia.jpg);
+    }
+
+    &--6 {
+        background-image: url(../images/protesis.jpg);
+    }
+
+    &-content {
+        padding: 1rem;
+        background: linear-gradient(black, rgba(0, 0, 0, 0.5));
+        align-self: flex-end;
+
+        &__title {
+            font-weight: 700;
+            text-decoration: none;
+            text-decoration-color: $color-cremita;
+        }
+    }
 }
 
-.card--1 {
-    background-image: url(../images/blanqueamiento1.jpg);
-}
-
-.card--2 {
-    background-image: url(../images/endodoncia.jpg);
-}
-
-.card--3 {
-    background-image: url(../images/esteticadental.jpg);
-}
-
-.card--4 {
-    background-image: url(../images/odontologiagral.jpg);
-}
-
-.card--5 {
-    background-image: url(../images/ortodoncia.jpg);
-}
-
-.card--6 {
-    background-image: url(../images/protesis.jpg);
-}
-
-.card:hover,
+.card .card:hover,
 .card:focus-within {
     transform: scale(1.05);
 }
 
-.card-content {
-    padding: 1rem;
-    background: linear-gradient(black, rgba(0, 0, 0, 0.5));
-    align-self: flex-end;
-}
-
-.card-content__title {
-    font-weight: 700;
-    text-decoration: underline;
-    text-decoration-color: $color-cremita;
-}
-
-.card-content__body {
+.card .card-content__body {
     color: $color-cremita;
     font-size: 0.8rem;
 }
@@ -237,11 +235,11 @@ legend {
 label {
     display: block;
     margin-bottom: 8px;
-}
 
-label.light {
-    font-weight: 300;
-    display: inline;
+    &.light {
+        font-weight: 300;
+        display: inline;
+    }
 }
 
 .number {
