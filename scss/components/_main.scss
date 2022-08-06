@@ -40,6 +40,10 @@
 
     &__main {
         max-width: 400px;
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 }
 

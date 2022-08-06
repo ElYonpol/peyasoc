@@ -153,6 +153,9 @@ a.nav__link:hover {
 .image__main {
   max-width: 400px;
 }
+.image__main:hover {
+  transform: scale(1.05);
+}
 
 .video {
   max-width: 560px;
