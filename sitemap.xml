@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://elyonpol.github.io/peyasoc/</loc>
+  <lastmod>2022-08-06T18:05:03+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://elyonpol.github.io/peyasoc/index.html</loc>
+  <lastmod>2022-08-06T18:05:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elyonpol.github.io/peyasoc/pages/servicios.html</loc>
+  <lastmod>2022-08-06T18:05:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elyonpol.github.io/peyasoc/pages/turnos.html</loc>
+  <lastmod>2022-08-06T18:05:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elyonpol.github.io/peyasoc/pages/profesionales.html</loc>
+  <lastmod>2022-08-06T18:05:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elyonpol.github.io/peyasoc/pages/odontotips.html</loc>
+  <lastmod>2022-08-06T18:05:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elyonpol.github.io/peyasoc/pages/contacto.html</loc>
+  <lastmod>2022-08-06T18:05:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
