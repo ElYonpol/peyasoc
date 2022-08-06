@@ -143,7 +143,7 @@ a.nav__link:hover {
   display: flex;
   flex-direction: column;
   padding: 5px;
-  align-items: center;
+  /*     align-items: center; */
   /*border: 2px solid green;  /*Esto es para guía*/
 }
 
@@ -151,7 +151,6 @@ a.nav__link:hover {
   box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
   border-radius: 4px;
 }
-
 .image__main {
   max-width: 400px;
 }
@@ -159,7 +158,6 @@ a.nav__link:hover {
 .video {
   max-width: 560px;
 }
-
 .video__main {
   max-width: 320px;
 }
@@ -184,7 +182,6 @@ a.nav__link:hover {
   color: #fff7ef;
   background-size: cover;
   background-position: center center;
-  /*   padding: 10rem 0 0; */
   max-width: 280px;
   height: 300px;
   border-radius: 1rem;
@@ -192,49 +189,41 @@ a.nav__link:hover {
   transition: transform 500ms ease;
   box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 }
-
 .card--1 {
   background-image: url(../images/blanqueamiento1.jpg);
 }
-
 .card--2 {
   background-image: url(../images/endodoncia.jpg);
 }
-
 .card--3 {
   background-image: url(../images/esteticadental.jpg);
 }
-
 .card--4 {
   background-image: url(../images/odontologiagral.jpg);
 }
-
 .card--5 {
   background-image: url(../images/ortodoncia.jpg);
 }
-
 .card--6 {
   background-image: url(../images/protesis.jpg);
 }
-
-.card:hover,
-.card:focus-within {
-  transform: scale(1.05);
-}
-
 .card-content {
   padding: 1rem;
   background: linear-gradient(black, rgba(0, 0, 0, 0.5));
   align-self: flex-end;
 }
-
 .card-content__title {
   font-weight: 700;
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-color: #fff7ef;
 }
 
-.card-content__body {
+.card .card:hover,
+.card:focus-within {
+  transform: scale(1.05);
+}
+
+.card .card-content__body {
   color: #fff7ef;
   font-size: 0.8rem;
 }
@@ -343,7 +332,6 @@ label {
   display: block;
   margin-bottom: 8px;
 }
-
 label.light {
   font-weight: 300;
   display: inline;
@@ -388,7 +376,7 @@ a.sidebar__item:hover {
 
 /* Media query para estructura GRID de MAIN y SIDEBAR en Tablets y PC*/
 @media (min-width: 992px) {
-  /* Escondo las tarjetas para vista Tablets y PC*/
+  /* Escondo las tarjetas y el logo para vista Tablets y PC*/
   .cards--container {
     display: none;
   }
@@ -401,7 +389,7 @@ a.sidebar__item:hover {
   }
   .carousel-control-next-icon,
 .carousel-control-prev-icon {
-    filter: drop-shadow(2px 2px 4px rgb(0, 0, 0));
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.75));
   }
   .grid--container {
     grid-template-areas: "header  header" "sidebar main" "footer  footer";

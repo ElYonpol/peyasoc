@@ -26,7 +26,8 @@ a.sidebar__item:hover {
 
 @media (min-width: 992px) {
 
-    /* Escondo las tarjetas para vista Tablets y PC*/
+    /* Escondo las tarjetas y el logo para vista Tablets y PC*/
+
     .cards--container {
         display: none;
     }
@@ -43,7 +44,7 @@ a.sidebar__item:hover {
 
     .carousel-control-next-icon,
     .carousel-control-prev-icon {
-        filter: drop-shadow(2px 2px 4px rgb(0 0 0 / 1));
+        filter: drop-shadow(2px 2px 4px rgb(0, 0, 0, 0.75));
     }
 
     .grid--container {
