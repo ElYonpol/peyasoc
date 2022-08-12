@@ -1,7 +1,7 @@
 /*ESTILOS DEL FOOTER*/
 
 footer {
-    background-color: $color-gris-logo;
+    background-color: map-get($colors , $color-gris-logo );
     width: 100%;
 }
 
@@ -15,13 +15,13 @@ footer {
 }
 
 .footer__social {
-    color: $color-cremita;
+    color: map-get($colors , color-cremita);
     text-align: center;
     padding: 5px;
 }
 
 .footer__bottom__copyright {
-    color: $color-cremita;
+    color: map-get($colors , color-cremita);
     text-align: center;
     padding: 5px;
 }
@@ -29,23 +29,23 @@ footer {
 .footer__bottom__copyright a {
     text-decoration: none;
     text-align: center;
-    color: $color-cremita;
+    color: map-get($colors , color-cremita);
 }
 
 .footer__bottom__copyright a:hover {
     transition: background-color 0.5s;
-    color: $color-coral-resaltado;
-    background-color: $color-cremita;
+    color: map-get($colors, color-coral-resaltado );
+    background-color: map-get($colors , color-cremita);
 }
 
 /* Íconos Redes Sociales */
 .fa-fontColor {
-    color: $color-cremita;
+    color: map-get($colors , color-cremita);
     font-size: 2rem;
 }
 
 .fa-fontColor:hover {
-    color: $color-naranja-logo;
+    color: map-get($colors , color-naranja-logo);
 }
 
 /* Botón flotante de WhatsApp

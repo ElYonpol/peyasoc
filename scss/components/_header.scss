@@ -48,7 +48,7 @@ header {
 
 .nav__list li {
     margin-left: 1.5rem;
-    color: $color-naranja-logo;
+    color: map-get($colors , color-naranja-logo);
     text-transform: uppercase;
     font-weight: bold;
     list-style: none;
@@ -59,12 +59,12 @@ header {
 }
 
 .nav__link {
-    color: $color-cremita;
+    color: map-get($colors , color-cremita);
     text-decoration: none;
     font-weight: bold;
 }
 
 a.nav__link:hover {
-    color: $color-coral-resaltado;
+    color: map-get($colors , color-coral-resaltado);
     text-shadow: 2px 2px 4px #6f756b;
 }

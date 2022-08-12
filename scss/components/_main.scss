@@ -13,7 +13,7 @@
         color: #475681;
         font-size: 2.5rem;
         font-weight: 700;
-        text-shadow: 2px 2px 4px $color-cremita;
+        text-shadow: 2px 2px 4px map-get($colors , color-cremita);
     }
 
     &-subtitle {
@@ -75,7 +75,7 @@
 .card {
     display: flex;
     flex-direction: row;
-    color: $color-cremita;
+    color: map-get($colors , color-cremita);
     background-size: cover;
     background-position: center center;
     max-width: 280px;
@@ -117,7 +117,7 @@
         &__title {
             font-weight: 700;
             text-decoration: none;
-            text-decoration-color: $color-cremita;
+            text-decoration-color: map-get($colors , color-cremita);
         }
     }
 }
@@ -128,7 +128,7 @@
 }
 
 .card .card-content__body {
-    color: $color-cremita;
+    color: map-get($colors , color-cremita);
     font-size: 0.8rem;
 }
 
@@ -151,7 +151,7 @@ puede hacer hover*/
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
-    color: $color-cremita;
+    color: map-get($colors , color-cremita);
     background-color: black;
     padding: 0.2rem 1rem;
     border-radius: 0.25rem;
@@ -160,7 +160,7 @@ puede hacer hover*/
 
 .button:hover,
 .button:focus {
-    background-color: $color-cremita;
+    background-color: map-get($colors , color-cremita);
     color: black;
 }
 
@@ -214,13 +214,13 @@ select {
 .btn--submit__contact {
     padding: 19px 39px 18px 39px;
     color: #fff;
-    background-color: $color-naranja-logo;
+    background-color: map-get($colors , color-naranja-logo);
     font-size: 18px;
     text-align: center;
     font-style: normal;
     border-radius: 5px;
     width: 100%;
-    border: 1px solid $color-coral-resaltado;
+    border: 1px solid map-get($colors , color-coral-resaltado);
     border-width: 1px 1px 3px;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
     margin-bottom: 10px;
@@ -247,7 +247,7 @@ label {
 }
 
 .number {
-    background-color: $color-naranja-logo;
+    background-color: map-get($colors , color-naranja-logo);
     color: #fff;
     height: 30px;
     width: 30px;

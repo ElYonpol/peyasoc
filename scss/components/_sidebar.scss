@@ -18,8 +18,8 @@
 a.sidebar__item:hover {
     /*Ver qué estilo le pongo*/
     transition: background-color 0.5s;
-    color: $color-coral-resaltado;
-    background-color: $color-cremita;
+    color: map-get($colors , color-coral-resaltado);
+    background-color: map-get($colors , color-cremita);
 }
 
 /* Media query para estructura GRID de MAIN y SIDEBAR en Tablets y PC*/
