@@ -124,19 +124,25 @@ a.nav__link:hover {
 .display-1 {
   text-align: center;
 }
-.display-1-intro {
+.display-1--intro {
   color: #475681;
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 900;
   text-shadow: 2px 2px 4px #fff7ef;
 }
-.display-1-subtitle {
+.display-1--subtitle {
   font-size: 1.5rem;
-  font-weight: 400;
-}
-.display-1-description {
-  font-size: 1rem;
+  font-weight: 700;
+  padding-top: 5px;
   padding-bottom: 5px;
+}
+.display-1--description {
+  font-size: 1rem;
+  font-weight: 400;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 80%;
+  align-self: center;
 }
 
 .col--main {
@@ -406,13 +412,13 @@ a.sidebar__item:hover {
     background-image: linear-gradient(to bottom, #dfe0df, #6f756b);
   }
   .display-1-intro {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .display-1-subtitle {
     font-size: 2rem;
   }
   .display-1-description {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 /*ESTILOS DEL FOOTER*/
