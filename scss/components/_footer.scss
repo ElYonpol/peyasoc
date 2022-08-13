@@ -1,7 +1,7 @@
 /*ESTILOS DEL FOOTER*/
 
 footer {
-    background-color: map-get($colors , $color-gris-logo );
+    background-color: map-get($colors , color-gris-logo);
     width: 100%;
 }
 
@@ -34,7 +34,7 @@ footer {
 
 .footer__bottom__copyright a:hover {
     transition: background-color 0.5s;
-    color: map-get($colors, color-coral-resaltado );
+    color: map-get($colors, color-coral-resaltado);
     background-color: map-get($colors , color-cremita);
 }
 
