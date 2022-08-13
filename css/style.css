@@ -139,6 +139,7 @@ a.nav__link:hover {
 .display-1--description {
   font-size: 1rem;
   font-weight: 400;
+  text-shadow: 1px 1px 4px #fff7ef;
   padding-top: 5px;
   padding-bottom: 5px;
   width: 80%;
