@@ -8,9 +8,10 @@ header {
 }
 
 #bs--navbar {
-    background-image: url(../images/consultorio_header.jpg);
+    @include bkg_img("../images/consultorio_header.jpg");
+    /* background-image: url(../images/consultorio_header.jpg); */
     background-position: center center;
-    background-size: cover;
+    /* background-size: cover; */
     width: 100%;
     border-radius: 4px;
 }
@@ -22,11 +23,9 @@ header {
 
 }
 
-.logo_texto {
-    max-width: 100%
-        /* 362px */
-    ;
-}
+/* .logo_texto {
+    max-width: 100%;
+} */
 
 .row {
     display: flex;

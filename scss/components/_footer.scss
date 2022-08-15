@@ -5,6 +5,32 @@ footer {
     width: 100%;
 }
 
+.footer {
+    &__social {
+        color: map-get($colors , color-cremita);
+        text-align: center;
+        padding: 5px;
+    }
+
+    &__bottom__copyright {
+        color: map-get($colors , color-cremita);
+        text-align: center;
+        padding: 5px;
+
+        & a {
+            text-decoration: none;
+            text-align: center;
+            color: map-get($colors , color-cremita);
+
+            &:hover {
+                transition: background-color 0.5s;
+                color: map-get($colors, color-coral-resaltado);
+                background-color: map-get($colors , color-cremita);
+            }
+        }
+    }
+}
+
 .row--footer {
     display: flex;
     flex-direction: column;
@@ -12,30 +38,6 @@ footer {
     padding: 0px;
     width: 100%;
     /*border: 2px solid black; /*Esto es para guía*/
-}
-
-.footer__social {
-    color: map-get($colors , color-cremita);
-    text-align: center;
-    padding: 5px;
-}
-
-.footer__bottom__copyright {
-    color: map-get($colors , color-cremita);
-    text-align: center;
-    padding: 5px;
-}
-
-.footer__bottom__copyright a {
-    text-decoration: none;
-    text-align: center;
-    color: map-get($colors , color-cremita);
-}
-
-.footer__bottom__copyright a:hover {
-    transition: background-color 0.5s;
-    color: map-get($colors, color-coral-resaltado);
-    background-color: map-get($colors , color-cremita);
 }
 
 /* Íconos Redes Sociales */

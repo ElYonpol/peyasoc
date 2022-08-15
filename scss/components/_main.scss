@@ -1,9 +1,10 @@
 /*ESTILOS DEL MAIN*/
 
 #main {
-    background-image: url(../images/main_background.jpg);
+    @include bkg_img("../images/main_background.jpg");
+    /* background-image: url(../images/main_background.jpg); */
     background-position: center bottom;
-    background-size: cover;
+    /* background-size: cover; */
 }
 
 .display-1 {
@@ -25,11 +26,9 @@
     }
 
     &--description {
+        @extend .display-1--subtitle;
         font-size: 1rem;
         font-weight: 400;
-        text-shadow: 1px 1px 4px map-get($colors , color-cremita);
-        padding-top: 5px;
-        padding-bottom: 5px;
         width: 80%;
         align-self: center;
     }
@@ -84,7 +83,7 @@
     display: flex;
     flex-direction: row;
     color: map-get($colors , color-cremita);
-    background-size: cover;
+    /* background-size: cover; */
     background-position: center center;
     max-width: 280px;
     height: 300px;
@@ -94,27 +93,33 @@
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 
     &--1 {
-        background-image: url(../images/blanqueamiento1.jpg);
+        @include bkg_img("../images/blanqueamiento1.jpg");
+        /* background-image: url(../images/blanqueamiento1.jpg); */
     }
 
     &--2 {
-        background-image: url(../images/endodoncia.jpg);
+        @include bkg_img("../images/endodoncia.jpg");
+        /* background-image: url(../images/endodoncia.jpg); */
     }
 
     &--3 {
-        background-image: url(../images/esteticadental.jpg);
+        @include bkg_img("../images/esteticadental.jpg");
+        /* background-image: url(../images/esteticadental.jpg); */
     }
 
     &--4 {
-        background-image: url(../images/odontologiagral.jpg);
+        @include bkg_img("../images/odontologiagral.jpg");
+        /* background-image: url(../images/odontologiagral.jpg); */
     }
 
     &--5 {
-        background-image: url(../images/ortodoncia.jpg);
+        @include bkg_img("../images/ortodoncia.jpg");
+        /* background-image: url(../images/ortodoncia.jpg); */
     }
 
     &--6 {
-        background-image: url(../images/protesis.jpg);
+        @include bkg_img("../images/protesis.jpg");
+        /* background-image: url(../images/protesis.jpg); */
     }
 
     &-content {
@@ -170,4 +175,53 @@ puede hacer hover*/
 .button:focus {
     background-color: map-get($colors , color-cremita);
     color: black;
+}
+
+/* Media query para estructura GRID de MAIN en Tablets y PC*/
+
+@media (min-width: 992px) {
+
+    /* Escondo las tarjetas y el logo para vista Tablets y PC*/
+
+    .cards--container {
+        display: none;
+    }
+
+    /*     .logo_texto {
+        display: none;
+    } */
+
+    /* Muestro el carrousel para vista Tablets y PC*/
+
+    #carouselExampleCaptions {
+        display: inline-block;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        filter: drop-shadow(2px 2px 4px rgb(0, 0, 0, 0.75));
+    }
+
+    .grid--container {
+        grid-template-areas:
+            "header  header"
+            "sidebar main"
+            "footer  footer";
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 100px auto;
+    }
+
+    .display-1 {
+        &--intro {
+            font-size: 2.5rem;
+        }
+
+        &--subtitle {
+            font-size: 2rem;
+        }
+
+        &--description {
+            font-size: 1.2rem;
+        }
+    }
 }

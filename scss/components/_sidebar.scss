@@ -22,39 +22,9 @@ a.sidebar__item:hover {
     background-color: map-get($colors , color-cremita);
 }
 
-/* Media query para estructura GRID de MAIN y SIDEBAR en Tablets y PC*/
+/* Media query para estructura GRID de SIDEBAR en Tablets y PC*/
 
 @media (min-width: 992px) {
-
-    /* Escondo las tarjetas y el logo para vista Tablets y PC*/
-
-    .cards--container {
-        display: none;
-    }
-
-    .logo_texto {
-        display: none;
-    }
-
-    /* Muestro el carrousel para vista Tablets y PC*/
-
-    #carouselExampleCaptions {
-        display: inline-block;
-    }
-
-    .carousel-control-next-icon,
-    .carousel-control-prev-icon {
-        filter: drop-shadow(2px 2px 4px rgb(0, 0, 0, 0.75));
-    }
-
-    .grid--container {
-        grid-template-areas:
-            "header  header"
-            "sidebar main"
-            "footer  footer";
-        grid-template-rows: auto 1fr auto;
-        grid-template-columns: 100px auto;
-    }
 
     .row--main {
         flex-wrap: wrap;
@@ -65,15 +35,4 @@ a.sidebar__item:hover {
         background-image: linear-gradient(to bottom, #dfe0df, #6f756b);
     }
 
-    .display-1-intro {
-        font-size: 2.5rem;
-    }
-
-    .display-1-subtitle {
-        font-size: 2rem;
-    }
-
-    .display-1-description {
-        font-size: 1.2rem;
-    }
 }

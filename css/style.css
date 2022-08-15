@@ -56,9 +56,11 @@ header {
 }
 
 #bs--navbar {
-  background-image: url(../images/consultorio_header.jpg);
-  background-position: center center;
+  background-image: url("../images/consultorio_header.jpg");
   background-size: cover;
+  /* background-image: url(../images/consultorio_header.jpg); */
+  background-position: center center;
+  /* background-size: cover; */
   width: 100%;
   border-radius: 4px;
 }
@@ -69,10 +71,9 @@ header {
   filter: invert(73%) sepia(37%) saturate(6944%) hue-rotate(359deg) brightness(97%) contrast(100%) drop-shadow(2px 2px 3px rgba(255, 255, 255, 0.8));
 }
 
-.logo_texto {
-  max-width: 100%;
-}
-
+/* .logo_texto {
+    max-width: 100%;
+} */
 .row {
   display: flex;
   flex-direction: row;
@@ -210,9 +211,11 @@ label.light {
 
 /*ESTILOS DEL MAIN*/
 #main {
-  background-image: url(../images/main_background.jpg);
-  background-position: center bottom;
+  background-image: url("../images/main_background.jpg");
   background-size: cover;
+  /* background-image: url(../images/main_background.jpg); */
+  background-position: center bottom;
+  /* background-size: cover; */
 }
 
 .display-1 {
@@ -224,7 +227,7 @@ label.light {
   font-weight: 900;
   text-shadow: 2px 2px 4px #fff7ef;
 }
-.display-1--subtitle {
+.display-1--subtitle, .display-1--description {
   font-size: 1.5rem;
   font-weight: 700;
   text-shadow: 1px 1px 4px #fff7ef;
@@ -234,9 +237,6 @@ label.light {
 .display-1--description {
   font-size: 1rem;
   font-weight: 400;
-  text-shadow: 1px 1px 4px #fff7ef;
-  padding-top: 5px;
-  padding-bottom: 5px;
   width: 80%;
   align-self: center;
 }
@@ -284,7 +284,7 @@ label.light {
   display: flex;
   flex-direction: row;
   color: #fff7ef;
-  background-size: cover;
+  /* background-size: cover; */
   background-position: center center;
   max-width: 280px;
   height: 300px;
@@ -294,22 +294,34 @@ label.light {
   box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 }
 .card--1 {
-  background-image: url(../images/blanqueamiento1.jpg);
+  background-image: url("../images/blanqueamiento1.jpg");
+  background-size: cover;
+  /* background-image: url(../images/blanqueamiento1.jpg); */
 }
 .card--2 {
-  background-image: url(../images/endodoncia.jpg);
+  background-image: url("../images/endodoncia.jpg");
+  background-size: cover;
+  /* background-image: url(../images/endodoncia.jpg); */
 }
 .card--3 {
-  background-image: url(../images/esteticadental.jpg);
+  background-image: url("../images/esteticadental.jpg");
+  background-size: cover;
+  /* background-image: url(../images/esteticadental.jpg); */
 }
 .card--4 {
-  background-image: url(../images/odontologiagral.jpg);
+  background-image: url("../images/odontologiagral.jpg");
+  background-size: cover;
+  /* background-image: url(../images/odontologiagral.jpg); */
 }
 .card--5 {
-  background-image: url(../images/ortodoncia.jpg);
+  background-image: url("../images/ortodoncia.jpg");
+  background-size: cover;
+  /* background-image: url(../images/ortodoncia.jpg); */
 }
 .card--6 {
-  background-image: url(../images/protesis.jpg);
+  background-image: url("../images/protesis.jpg");
+  background-size: cover;
+  /* background-image: url(../images/protesis.jpg); */
 }
 .card-content {
   padding: 1rem;
@@ -361,6 +373,38 @@ puede hacer hover*/
   color: black;
 }
 
+/* Media query para estructura GRID de MAIN en Tablets y PC*/
+@media (min-width: 992px) {
+  /* Escondo las tarjetas y el logo para vista Tablets y PC*/
+  .cards--container {
+    display: none;
+  }
+  /*     .logo_texto {
+      display: none;
+  } */
+  /* Muestro el carrousel para vista Tablets y PC*/
+  #carouselExampleCaptions {
+    display: inline-block;
+  }
+  .carousel-control-next-icon,
+.carousel-control-prev-icon {
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.75));
+  }
+  .grid--container {
+    grid-template-areas: "header  header" "sidebar main" "footer  footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100px auto;
+  }
+  .display-1--intro {
+    font-size: 2.5rem;
+  }
+  .display-1--subtitle, .display-1--description {
+    font-size: 2rem;
+  }
+  .display-1--description {
+    font-size: 1.2rem;
+  }
+}
 /*ESTILOS DEL SIDEBAR*/
 #sidebar {
   background-image: linear-gradient(to right, #dfe0df, #6f756b);
@@ -384,28 +428,8 @@ a.sidebar__item:hover {
   background-color: #fff7ef;
 }
 
-/* Media query para estructura GRID de MAIN y SIDEBAR en Tablets y PC*/
+/* Media query para estructura GRID de SIDEBAR en Tablets y PC*/
 @media (min-width: 992px) {
-  /* Escondo las tarjetas y el logo para vista Tablets y PC*/
-  .cards--container {
-    display: none;
-  }
-  .logo_texto {
-    display: none;
-  }
-  /* Muestro el carrousel para vista Tablets y PC*/
-  #carouselExampleCaptions {
-    display: inline-block;
-  }
-  .carousel-control-next-icon,
-.carousel-control-prev-icon {
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.75));
-  }
-  .grid--container {
-    grid-template-areas: "header  header" "sidebar main" "footer  footer";
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 100px auto;
-  }
   .row--main {
     flex-wrap: wrap;
     justify-content: center;
@@ -413,20 +437,32 @@ a.sidebar__item:hover {
   #sidebar {
     background-image: linear-gradient(to bottom, #dfe0df, #6f756b);
   }
-  .display-1-intro {
-    font-size: 2.5rem;
-  }
-  .display-1-subtitle {
-    font-size: 2rem;
-  }
-  .display-1-description {
-    font-size: 1.2rem;
-  }
 }
 /*ESTILOS DEL FOOTER*/
 footer {
   background-color: #6f756b;
   width: 100%;
+}
+
+.footer__social {
+  color: #fff7ef;
+  text-align: center;
+  padding: 5px;
+}
+.footer__bottom__copyright {
+  color: #fff7ef;
+  text-align: center;
+  padding: 5px;
+}
+.footer__bottom__copyright a {
+  text-decoration: none;
+  text-align: center;
+  color: #fff7ef;
+}
+.footer__bottom__copyright a:hover {
+  transition: background-color 0.5s;
+  color: #f85d5a;
+  background-color: #fff7ef;
 }
 
 .row--footer {
@@ -436,30 +472,6 @@ footer {
   padding: 0px;
   width: 100%;
   /*border: 2px solid black; /*Esto es para guía*/
-}
-
-.footer__social {
-  color: #fff7ef;
-  text-align: center;
-  padding: 5px;
-}
-
-.footer__bottom__copyright {
-  color: #fff7ef;
-  text-align: center;
-  padding: 5px;
-}
-
-.footer__bottom__copyright a {
-  text-decoration: none;
-  text-align: center;
-  color: #fff7ef;
-}
-
-.footer__bottom__copyright a:hover {
-  transition: background-color 0.5s;
-  color: #f85d5a;
-  background-color: #fff7ef;
 }
 
 /* Íconos Redes Sociales */
