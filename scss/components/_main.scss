@@ -83,7 +83,6 @@
     display: flex;
     flex-direction: row;
     color: map-get($colors , color-cremita);
-    /* background-size: cover; */
     background-position: center center;
     max-width: 280px;
     height: 300px;
@@ -94,32 +93,26 @@
 
     &--1 {
         @include bkg_img("../images/blanqueamiento1.jpg");
-        /* background-image: url(../images/blanqueamiento1.jpg); */
     }
 
     &--2 {
         @include bkg_img("../images/endodoncia.jpg");
-        /* background-image: url(../images/endodoncia.jpg); */
     }
 
     &--3 {
         @include bkg_img("../images/esteticadental.jpg");
-        /* background-image: url(../images/esteticadental.jpg); */
     }
 
     &--4 {
         @include bkg_img("../images/odontologiagral.jpg");
-        /* background-image: url(../images/odontologiagral.jpg); */
     }
 
     &--5 {
         @include bkg_img("../images/ortodoncia.jpg");
-        /* background-image: url(../images/ortodoncia.jpg); */
     }
 
     &--6 {
         @include bkg_img("../images/protesis.jpg");
-        /* background-image: url(../images/protesis.jpg); */
     }
 
     &-content {

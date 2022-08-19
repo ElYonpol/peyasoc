@@ -284,7 +284,6 @@ label.light {
   display: flex;
   flex-direction: row;
   color: #fff7ef;
-  /* background-size: cover; */
   background-position: center center;
   max-width: 280px;
   height: 300px;
@@ -296,32 +295,26 @@ label.light {
 .card--1 {
   background-image: url("../images/blanqueamiento1.jpg");
   background-size: cover;
-  /* background-image: url(../images/blanqueamiento1.jpg); */
 }
 .card--2 {
   background-image: url("../images/endodoncia.jpg");
   background-size: cover;
-  /* background-image: url(../images/endodoncia.jpg); */
 }
 .card--3 {
   background-image: url("../images/esteticadental.jpg");
   background-size: cover;
-  /* background-image: url(../images/esteticadental.jpg); */
 }
 .card--4 {
   background-image: url("../images/odontologiagral.jpg");
   background-size: cover;
-  /* background-image: url(../images/odontologiagral.jpg); */
 }
 .card--5 {
   background-image: url("../images/ortodoncia.jpg");
   background-size: cover;
-  /* background-image: url(../images/ortodoncia.jpg); */
 }
 .card--6 {
   background-image: url("../images/protesis.jpg");
   background-size: cover;
-  /* background-image: url(../images/protesis.jpg); */
 }
 .card-content {
   padding: 1rem;
