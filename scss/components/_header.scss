@@ -9,9 +9,7 @@ header {
 
 #bs--navbar {
     @include bkg_img("../images/consultorio_header.webp");
-    /* background-image: url(../images/consultorio_header.webp); */
     background-position: center center;
-    /* background-size: cover; */
     width: 100%;
     border-radius: 4px;
 }
@@ -30,7 +28,6 @@ header {
     justify-content: space-between;
     padding: 5px;
     width: 100%;
-    /*border: 1px solid black;*/
 }
 
 .col {
@@ -38,7 +35,6 @@ header {
     flex-wrap: wrap;
     align-items: center;
     padding: 5px;
-    /*border: 1px solid green;*/
 }
 
 .nav__list li {
@@ -50,7 +46,6 @@ header {
     display: inline-block;
     align-self: center;
     text-shadow: 2px 2px 4px black;
-    /*border: 1px solid blue;*/
 }
 
 .nav__link {
