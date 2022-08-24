@@ -633,8 +633,6 @@ footer {
 @media only screen and (max-width: 540px) {
   .container {
     max-width: 100%;
-  }
-  .row {
     padding: 0px;
   }
   .team-members li {
