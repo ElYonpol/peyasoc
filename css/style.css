@@ -634,6 +634,9 @@ footer {
   .container {
     max-width: 100%;
   }
+  .row {
+    padding: 0px;
+  }
   .team-members li {
     text-align: center;
   }
