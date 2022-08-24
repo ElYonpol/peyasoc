@@ -57,9 +57,9 @@ header {
 }
 
 #bs--navbar {
-  background-image: url("../images/consultorio_header.jpg");
+  background-image: url("../images/consultorio_header.webp");
   background-size: cover;
-  /* background-image: url(../images/consultorio_header.jpg); */
+  /* background-image: url(../images/consultorio_header.webp); */
   background-position: center center;
   /* background-size: cover; */
   width: 100%;
@@ -209,9 +209,9 @@ label.light {
 
 /*ESTILOS DEL MAIN*/
 #main {
-  background-image: url("../images/main_background.jpg");
+  background-image: url("../images/main_background.webp");
   background-size: cover;
-  /* background-image: url(../images/main_background.jpg); */
+  /* background-image: url(../images/main_background.webp); */
   background-position: center bottom;
   /* background-size: cover; */
 }
@@ -291,27 +291,27 @@ label.light {
   box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 }
 .card--1 {
-  background-image: url("../images/blanqueamiento1.jpg");
+  background-image: url("../images/blanqueamiento1.webp");
   background-size: cover;
 }
 .card--2 {
-  background-image: url("../images/endodoncia.jpg");
+  background-image: url("../images/endodoncia.webp");
   background-size: cover;
 }
 .card--3 {
-  background-image: url("../images/esteticadental.jpg");
+  background-image: url("../images/esteticadental.webp");
   background-size: cover;
 }
 .card--4 {
-  background-image: url("../images/odontologiagral.jpg");
+  background-image: url("../images/odontologiagral.webp");
   background-size: cover;
 }
 .card--5 {
-  background-image: url("../images/ortodoncia.jpg");
+  background-image: url("../images/ortodoncia.webp");
   background-size: cover;
 }
 .card--6 {
-  background-image: url("../images/protesis.jpg");
+  background-image: url("../images/protesis.webp");
   background-size: cover;
 }
 .card-content {
@@ -627,6 +627,44 @@ footer {
   }
   .member-info {
     transform: rotate(0);
+  }
+  .member-details > div:after {
+    background-image: linear-gradient(0, rgba(248, 93, 90, 0.8) 50%, transparent 50%);
+  }
+  .member-details img {
+    transform: rotate(0) translate(0, 0);
+  }
+  .team-overview {
+    padding: 15px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .container {
+    max-width: 100%;
+  }
+  .team-members li {
+    text-align: center;
+  }
+  .team-members li > div {
+    float: none;
+    display: inline-block;
+    margin: 0 !important;
+  }
+  .team-members {
+    transform: rotate(0);
+  }
+  .member-info {
+    transform: rotate(0);
+  }
+  .member-info h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    top: -100px;
+  }
+  .member-info p {
+    font-size: 12px;
+    bottom: -150px;
   }
   .member-details > div:after {
     background-image: linear-gradient(0, rgba(248, 93, 90, 0.8) 50%, transparent 50%);

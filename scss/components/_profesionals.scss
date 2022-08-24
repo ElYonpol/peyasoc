@@ -158,3 +158,53 @@
         padding: 15px;
     }
 }
+
+
+@media only screen and (max-width : 540px) {
+
+    .container {
+        max-width: 100%;
+    }
+
+    .team-members li {
+        text-align: center;
+    }
+
+    .team-members li>div {
+        float: none;
+        display: inline-block;
+        margin: 0 !important;
+    }
+
+    .team-members {
+        transform: rotate(0);
+    }
+
+    .member-info {
+        transform: rotate(0);
+    }
+
+    .member-info h3 {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        top: -100px;
+    }
+    
+    .member-info p {
+        font-size: 12px;
+        bottom: -150px;
+    }
+
+    .member-details>div:after {
+        background-image: linear-gradient(0, rgba(248, 93, 90, .8) 50%, transparent 50%);
+    }
+
+    .member-details img {
+        transform: rotate(0) translate(0, 0);
+    }
+
+    .team-overview {
+        padding: 15px;
+    }
+}

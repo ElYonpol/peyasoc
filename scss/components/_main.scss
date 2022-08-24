@@ -1,8 +1,8 @@
 /*ESTILOS DEL MAIN*/
 
 #main {
-    @include bkg_img("../images/main_background.jpg");
-    /* background-image: url(../images/main_background.jpg); */
+    @include bkg_img("../images/main_background.webp");
+    /* background-image: url(../images/main_background.webp); */
     background-position: center bottom;
     /* background-size: cover; */
 }
@@ -92,27 +92,27 @@
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 
     &--1 {
-        @include bkg_img("../images/blanqueamiento1.jpg");
+        @include bkg_img("../images/blanqueamiento1.webp");
     }
 
     &--2 {
-        @include bkg_img("../images/endodoncia.jpg");
+        @include bkg_img("../images/endodoncia.webp");
     }
 
     &--3 {
-        @include bkg_img("../images/esteticadental.jpg");
+        @include bkg_img("../images/esteticadental.webp");
     }
 
     &--4 {
-        @include bkg_img("../images/odontologiagral.jpg");
+        @include bkg_img("../images/odontologiagral.webp");
     }
 
     &--5 {
-        @include bkg_img("../images/ortodoncia.jpg");
+        @include bkg_img("../images/ortodoncia.webp");
     }
 
     &--6 {
-        @include bkg_img("../images/protesis.jpg");
+        @include bkg_img("../images/protesis.webp");
     }
 
     &-content {

@@ -8,8 +8,8 @@ header {
 }
 
 #bs--navbar {
-    @include bkg_img("../images/consultorio_header.jpg");
-    /* background-image: url(../images/consultorio_header.jpg); */
+    @include bkg_img("../images/consultorio_header.webp");
+    /* background-image: url(../images/consultorio_header.webp); */
     background-position: center center;
     /* background-size: cover; */
     width: 100%;
