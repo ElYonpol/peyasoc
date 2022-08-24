@@ -2,7 +2,7 @@
 
 <b>Proyecto "Portas Esquivel & Asociados"</b>
 <br>
-Este desarrollo se refiere a un sitio web de 6 páginas para un consultorio odontológico: Página principal, Servicios odontológicos ofrecidos, Fomrulario para solicitar turnos, Listado de Profesionales, Tips Odontológicos, Formulario de Contacto.
+Este desarrollo se refiere a un sitio web de 6 páginas para un consultorio odontológico: Página principal, Servicios odontológicos ofrecidos, Formulario para solicitar turnos, Listado de Profesionales, Tips Odontológicos, Formulario de Contacto.
 <br>
 <b>Motivación</b>
 <br>
