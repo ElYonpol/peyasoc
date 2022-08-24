@@ -16,9 +16,4 @@ Las páginas de profesionales, turnos y contacto son de prueba, aún no son func
 <br>
 El código fue realizado en HTML y CSS exclusivamente, utilizando SASS y Bootstrap para estilos.
 <br>
-<<<<<<< HEAD
 <b>Desarrollado por Juan Pablo Portas Esquivel</b>
-=======
-<b>Desarrollado por Juan Pablo Portas Esquivel</b>
-
-> > > > > > > d7b1b53bead1b1dd15a1d959db0e1363edac6620
