@@ -1,4 +1,4 @@
-@mixin bkg_img($img_url){
+@mixin bkg_img($img_url) {
     background-image: url($img_url);
     background-size: cover;
 }
