@@ -1,53 +1,53 @@
 /*ESTILOS DEL FOOTER*/
 
 footer {
-    background-color: map-get($colors , color-gris-logo);
-    width: 100%;
+	background-color: map-get($colors , color-gris-logo);
+	width: 100%;
 }
 
 .footer {
-    &__social {
-        color: map-get($colors , color-cremita);
-        text-align: center;
-        padding: 5px;
-    }
+	&__social {
+		color: map-get($colors , color-cremita);
+		text-align: center;
+		padding: 5px;
+	}
 
-    &__bottom__copyright {
-        color: map-get($colors , color-cremita);
-        text-align: center;
-        padding: 5px;
+	&__bottom__copyright {
+		color: map-get($colors , color-cremita);
+		text-align: center;
+		padding: 5px;
 
-        & a {
-            text-decoration: none;
-            text-align: center;
-            color: map-get($colors , color-cremita);
+		& a {
+			text-decoration: none;
+			text-align: center;
+			color: map-get($colors , color-cremita);
 
-            &:hover {
-                transition: background-color 0.5s;
-                color: map-get($colors, color-coral-resaltado);
-                background-color: map-get($colors , color-cremita);
-            }
-        }
-    }
+			&:hover {
+				transition: background-color 0.5s;
+				color: map-get($colors, color-coral-resaltado);
+				background-color: map-get($colors , color-cremita);
+			}
+		}
+	}
 }
 
 .row--footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0px;
-    width: 100%;
-    /*border: 2px solid black; /*Esto es para guía*/
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 0px;
+	width: 100%;
+	/*border: 2px solid black; /*Esto es para guía*/
 }
 
 /* Íconos Redes Sociales */
 .fa-fontColor {
-    color: map-get($colors , color-cremita);
-    font-size: 2rem;
+	color: map-get($colors , color-cremita);
+	font-size: 2rem;
 }
 
 .fa-fontColor:hover {
-    color: map-get($colors , color-naranja-logo);
+	color: map-get($colors , color-naranja-logo);
 }
 
 /* Botón flotante de WhatsApp

@@ -110,7 +110,9 @@ a.nav__link:hover {
 
 /*ESTILOS DEL MAIN -- Formularios*/
 form {
-  max-width: 350px;
+  width: 80%;
+  min-width: 350px;
+  max-width: 500px;
   margin: 10px auto;
   padding: 10px 20px;
   background: #f4f7f8;
@@ -217,6 +219,7 @@ label.light {
   font-size: 2rem;
   font-weight: 900;
   text-shadow: 2px 2px 4px #fff7ef;
+  padding-top: 5px;
 }
 .display-1--subtitle, .display-1--description {
   font-size: 1.5rem;
@@ -363,8 +366,8 @@ puede hacer hover*/
     display: none;
   }
   /*     .logo_texto {
-      display: none;
-  } */
+         display: none;
+     } */
   /* Muestro el carrousel para vista Tablets y PC*/
   #carouselExampleCaptions {
     display: inline-block;
@@ -667,6 +670,88 @@ footer {
   }
   .team-overview {
     padding: 15px;
+  }
+}
+/* Estructura GRID responsive de las tarjetas - COMPRAS*/
+.cartCards--container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+  padding: 2rem;
+}
+
+.cartCard {
+  display: flex;
+  flex-direction: row;
+  color: #fff7ef;
+  background-position: center center;
+  max-width: 280px;
+  height: 300px;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 500ms ease;
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+}
+.cartCard--0 {
+  background-image: url("../images/cartCard--0.webp");
+  background-size: cover;
+}
+.cartCard--1 {
+  background-image: url("../images/cartCard--1.webp");
+  background-size: cover;
+}
+.cartCard--2 {
+  background-image: url("../images/cartCard--2.webp");
+  background-size: cover;
+}
+.cartCard--3 {
+  background-image: url("../images/cartCard--3.webp");
+  background-size: cover;
+}
+.cartCard--4 {
+  background-image: url("../images/cartCard--4.webp");
+  background-size: cover;
+}
+.cartCard--5 {
+  background-image: url("../images/cartCard--5.webp");
+  background-size: cover;
+}
+.cartCard--6 {
+  background-image: url("../images/cartCard--6.webp");
+  background-size: cover;
+}
+.cartCard-content {
+  padding: 1rem;
+  background: linear-gradient(black, rgba(0, 0, 0, 0.5));
+  align-self: flex-end;
+}
+.cartCard-content__title {
+  font-weight: 700;
+  text-decoration: none;
+  text-decoration-color: #fff7ef;
+}
+
+.cartCard .cartCard:hover,
+.cartCard:focus-within {
+  transform: scale(1.05);
+}
+
+.cartCard .cartCard-content__body {
+  color: #fff7ef;
+  font-size: 0.8rem;
+}
+
+/*consultar si el mecanismo de entrada primario del usuario
+puede hacer hover*/
+@media (hover) {
+  .cartCard-content {
+    transform: translateY(70%);
+    transition: transform 500ms ease;
+  }
+  .cartCard:hover .cartCard-content {
+    transform: translateY(0);
+    transition-delay: 500ms;
   }
 }
 

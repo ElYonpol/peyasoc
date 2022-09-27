@@ -6,19 +6,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta
 			name="description"
-			content="Profesionales especialistas en estética dental, blanqueamiento, endodoncia, odontología general, ortodoncia y prótesis."
+			content="Consejos odontológicos para el correcto cuidado de tus dientes en tu vida diaria."
 		/>
 		<meta
 			name="keywords"
-			content="profesionales, odontólogo, odontología, endodoncia, tratamiento de conducto, ortodoncia, prótesis, blanqueamiento, estética dental, caries, Portas Esquivel"
+			content="compras, productos, servicios, e-commerce, odontología, endodoncia, tratamiento de conducto, ortodoncia, prótesis, blanqueamiento, estética dental, caries, Portas Esquivel"
 		/>
 
 		<!-- OPEN GRAPH -->
 
-		<meta
-			property="og:title"
-			content="Portas Esquivel & Asociados | Nuestros Profesionales"
-		/>
+		<meta property="og:title" content="Portas Esquivel & Asociados | Compras" />
 		<meta property="og:image" content="https://i.ibb.co/vQXP3xS/icon-pe.jpg" />
 
 		<link rel="shortcut icon" href="../icons_web/icon_pe.jpg" />
@@ -65,7 +62,11 @@
 			crossorigin="anonymous"
 		></script>
 
-		<title>Portas Esquivel & Asociados | Nuestros Profesionales</title>
+		<!-- Código JavaScript e-Commerce -->
+
+		<script defer src="../js/cart.js"></script>
+
+		<title>Portas Esquivel & Asociados | Compras</title>
 	</head>
 
 	<!-- ESTRUCTURA CON GRID Y FLEXBOX -->
@@ -108,10 +109,12 @@
 							<li class="nav-item">
 								<a class="nav-link nav__link" href="turnos.html">Turnos</a>
 							</li>
-							<li class="nav-item">Profesionales</li>
 							<li class="nav-item">
-								<a class="nav-link nav__link" href="compras.html">Compras</a>
+								<a class="nav-link nav__link" href="profesionales.html"
+									>Profesionales</a
+								>
 							</li>
+							<li class="nav-item">Compras</li>
 							<li class="nav-item">
 								<a class="nav-link nav__link" href="contacto.html">Contacto</a>
 							</li>
@@ -126,113 +129,106 @@
 		<section id="main">
 			<div class="col--main">
 				<h1 class="display-1">
-					<div class="display-1--intro">Nuestros Profesionales</div>
+					<div class="display-1--intro">Adquiera su producto o servicio</div>
 				</h1>
 
-				<!-- DIAGRAMA RESPONSIVE PROFESIONALES -->
-				<!-- https://codepen.io/thenahidul/pen/WXKONJ -->
+				<!-- CARDS PARA EL e-COMMERCE - Todas las vistas -->
 
-				<div class="container">
-					<div class="row flex-center sm-no-flex">
-						<div class="pull-right sm-no-float">
-							<ul class="team-members">
-								<!-- single member row starts -->
-								<li class="clearfix">
-									<div class="member-details">
-										<div>
-											<img
-												src="../images/profesionales_01_transp.webp"
-												alt="Dra. Ana"
-											/>
-											<div class="member-info">
-												<p>Blanqueamiento</p>
-												<h3>Ana</h3>
-											</div>
-										</div>
-									</div>
-
-									<div class="member-details">
-										<div>
-											<img
-												src="../images/profesionales_03_transp.webp"
-												alt="Dr. José"
-											/>
-											<div class="member-info">
-												<p>Odontología gral.</p>
-												<h3>José</h3>
-											</div>
-										</div>
-									</div>
-								</li>
-								<!-- /single member row ends -->
-
-								<!-- single member row starts -->
-								<li class="clearfix">
-									<div class="member-details">
-										<div>
-											<img
-												src="../images/profesionales_04_transp.webp"
-												alt="Dra. Juana"
-											/>
-											<div class="member-info">
-												<p>Prótesis</p>
-												<h3>Juana</h3>
-											</div>
-										</div>
-									</div>
-
-									<div class="member-details">
-										<div>
-											<img
-												src="../images/profesionales_02_transp.webp"
-												alt="Dra. María"
-											/>
-											<div class="member-info">
-												<p>Endodoncia</p>
-												<h3>María</h3>
-											</div>
-										</div>
-									</div>
-								</li>
-								<!-- /single member row ends -->
-
-								<!-- single member row starts -->
-								<li class="clearfix">
-									<div class="member-details">
-										<div>
-											<img
-												src="../images/profesionales_05_transp.webp"
-												alt="Asistente"
-											/>
-											<div class="member-info">
-												<p>Asistente</p>
-												<h3>Laura</h3>
-											</div>
-										</div>
-									</div>
-
-									<div class="member-details">
-										<div>
-											<img
-												src="../images/profesionales_06_transp.webp"
-												alt="Asistente"
-											/>
-											<div class="member-info">
-												<p>Asistente</p>
-												<h3>Luis</h3>
-											</div>
-										</div>
-									</div>
-								</li>
-								<!-- /single member row ends -->
-							</ul>
-							<!-- /end team-photos -->
+				<div class="cartCards--container">
+					<div class="cartCard cartCard--0">
+						<div class="cartCard-content">
+							<p class="cartCard-content__title">Blanqueamiento</p>
+							<p class="cartCard-content__body">
+								Tratamientos especializados para lograr una sonrisa radiante y
+								sana.
+							</p>
+							<a href="#" class="button" onclick="carritoCompras()"
+								>Agregar 🛒</a
+							>
 						</div>
-						<!-- /end col-md-8 -->
 					</div>
-					<!-- /end row -->
+
+					<div class="cartCard cartCard--1">
+						<div class="cartCard-content">
+							<p class="cartCard-content__title">Prótesis Completa</p>
+							<p class="cartCard-content__body">
+								La solución completa a cada caso que se presenta para poder
+								disfrutar de una masticación adecuada.
+							</p>
+							<a href="#" class="button" onclick="carritoCompras()"
+								>Agregar 🛒</a
+							>
+						</div>
+					</div>
+
+					<div class="cartCard cartCard--2">
+						<div class="cartCard-content">
+							<p class="cartCard-content__title">Prótesis Flexible</p>
+							<p class="cartCard-content__body">
+								La solución flexible a cada caso que se presenta para poder
+								disfrutar de una masticación adecuada.
+							</p>
+							<a href="#" class="button" onclick="carritoCompras()"
+								>Agregar 🛒</a
+							>
+						</div>
+					</div>
+
+					<div class="cartCard cartCard--3">
+						<div class="cartCard-content">
+							<p class="cartCard-content__title">Prótesis Cromo-Cobalto</p>
+							<p class="cartCard-content__body">
+								La solución en Cromo-Cobalto a cada caso que se presenta para
+								poder disfrutar de una masticación adecuada.
+							</p>
+							<a href="#" class="button" onclick="carritoCompras()"
+								>Agregar 🛒</a
+							>
+						</div>
+					</div>
+
+					<div class="cartCard cartCard--4">
+						<div class="cartCard-content">
+							<p class="cartCard-content__title">
+								Ortodoncia convencional (braquets)
+							</p>
+							<p class="cartCard-content__body">
+								La ortodoncia es una rama de la odontología que estudia,
+								previene y corrige anomalías de posición tanto óseas como
+								dentales.
+							</p>
+							<a href="#" class="button" onclick="carritoCompras()"
+								>Agregar 🛒</a
+							>
+						</div>
+					</div>
+
+					<div class="cartCard cartCard--5">
+						<div class="cartCard-content">
+							<p class="cartCard-content__title">Implante y Corona</p>
+							<p class="cartCard-content__body">
+								La solución en implantes y coronas a cada caso que se presenta
+								para poder disfrutar de una masticación adecuada.
+							</p>
+							<a href="#" class="button" onclick="carritoCompras()"
+								>Agregar 🛒</a
+							>
+						</div>
+					</div>
+
+					<div class="cartCard cartCard--6">
+						<div class="cartCard-content">
+							<p class="cartCard-content__title">Placa Miorelajante</p>
+							<p class="cartCard-content__body">
+								La solución en tratamientos activos de eliminación de los
+								efectos del bruxismo.
+							</p>
+							<a href="#" class="button" onclick="carritoCompras()"
+								>Agregar 🛒</a
+							>
+						</div>
+					</div>
 				</div>
-				<!-- /end container -->
 			</div>
 		</section>
 
@@ -297,8 +293,9 @@
 				</div>
 
 				<div class="footer__bottom__copyright">
-					&copy; Copyright 2022 <a href="#">Portas Esquivel & Asociados</a> |
-					Creada por Juan Pablo Portas Esquivel
+					&copy; Copyright 2022
+					<a href="#">Portas Esquivel & Asociados</a> |Creada por Juan Pablo
+					Portas Esquivel
 				</div>
 			</div>
 			<!-- Botón flotante de WhatsApp 

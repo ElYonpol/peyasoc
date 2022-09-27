@@ -2,54 +2,54 @@
 
 /* Reset CSS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* outline: 1px solid green; */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* outline: 1px solid green; */
 }
 
 /* Para que ocupe toda la altura */
 html {
-    height: 100%;
+	height: 100%;
 }
 
 /*ESTILOS DEL BODY*/
 
 body {
-    font-family: "Montserrat", sans-serif;
-    /*   min-height: 100%; */
+	font-family: "Montserrat", sans-serif;
+	/*   min-height: 100%; */
 }
 
 /* Armado de la estructura con GRID Mobile first*/
 
 .grid--container>* {
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-    border-radius: 4px;
+	box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+	border-radius: 4px;
 }
 
 #header {
-    grid-area: header;
+	grid-area: header;
 }
 
 #main {
-    grid-area: main;
+	grid-area: main;
 }
 
 #sidebar {
-    grid-area: sidebar;
+	grid-area: sidebar;
 }
 
 #footer {
-    grid-area: footer;
+	grid-area: footer;
 }
 
 .grid--container {
-    display: grid;
-    grid-template-areas:
-        "header"
-        "sidebar"
-        "main"
-        "footer";
-    grid-template-rows: auto auto 1fr auto;
-    height: 100vh;
+	display: grid;
+	grid-template-areas:
+		"header"
+		"sidebar"
+		"main"
+		"footer";
+	grid-template-rows: auto auto 1fr auto;
+	height: 100vh;
 }

@@ -1,62 +1,63 @@
 /*ESTILOS DEL MAIN*/
 
 #main {
-    @include bkg_img("../images/main_background.webp");
-    background-position: center bottom;
+	@include bkg_img("../images/main_background.webp");
+	background-position: center bottom;
 }
 
 .display-1 {
-    text-align: center;
+	text-align: center;
 
-    &--intro {
-        color: #475681;
-        font-size: 2rem;
-        font-weight: 900;
-        text-shadow: 2px 2px 4px map-get($colors , color-cremita);
-    }
+	&--intro {
+		color: #475681;
+		font-size: 2rem;
+		font-weight: 900;
+		text-shadow: 2px 2px 4px map-get($colors , color-cremita);
+		padding-top: 5px;
+	}
 
-    &--subtitle {
-        font-size: 1.5rem;
-        font-weight: 700;
-        text-shadow: 1px 1px 4px map-get($colors , color-cremita);
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
+	&--subtitle {
+		font-size: 1.5rem;
+		font-weight: 700;
+		text-shadow: 1px 1px 4px map-get($colors , color-cremita);
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
 
-    &--description {
-        @extend .display-1--subtitle;
-        font-size: 1rem;
-        font-weight: 400;
-        width: 80%;
-        align-self: center;
-    }
+	&--description {
+		@extend .display-1--subtitle;
+		font-size: 1rem;
+		font-weight: 400;
+		width: 80%;
+		align-self: center;
+	}
 }
 
 .col--main {
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
 }
 
 .image {
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-    border-radius: 4px;
+	box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+	border-radius: 4px;
 
-    &__main {
-        max-width: 400px;
+	&__main {
+		max-width: 400px;
 
-        &:hover {
-            transform: scale(1.05);
-        }
-    }
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
 }
 
 .video {
-    max-width: 560px;
+	max-width: 560px;
 
-    &__main {
-        max-width: 320px;
-    }
+	&__main {
+		max-width: 320px;
+	}
 }
 
 /* Estilos de tarjetas */
@@ -64,154 +65,154 @@
 /* Escondo el carrousel para vista Mobile*/
 
 #carouselExampleCaptions {
-    display: none;
+	display: none;
 }
 
 /* Estructura GRID responsive de las tarjetas*/
 
 .cards--container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-gap: 1rem;
-    justify-items: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-gap: 1rem;
+	justify-items: center;
 }
 
 .card {
-    display: flex;
-    flex-direction: row;
-    color: map-get($colors , color-cremita);
-    background-position: center center;
-    max-width: 280px;
-    height: 300px;
-    border-radius: 1rem;
-    overflow: hidden;
-    transition: transform 500ms ease;
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+	display: flex;
+	flex-direction: row;
+	color: map-get($colors , color-cremita);
+	background-position: center center;
+	max-width: 280px;
+	height: 300px;
+	border-radius: 1rem;
+	overflow: hidden;
+	transition: transform 500ms ease;
+	box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 
-    &--1 {
-        @include bkg_img("../images/blanqueamiento1.webp");
-    }
+	&--1 {
+		@include bkg_img("../images/blanqueamiento1.webp");
+	}
 
-    &--2 {
-        @include bkg_img("../images/endodoncia.webp");
-    }
+	&--2 {
+		@include bkg_img("../images/endodoncia.webp");
+	}
 
-    &--3 {
-        @include bkg_img("../images/esteticadental.webp");
-    }
+	&--3 {
+		@include bkg_img("../images/esteticadental.webp");
+	}
 
-    &--4 {
-        @include bkg_img("../images/odontologiagral.webp");
-    }
+	&--4 {
+		@include bkg_img("../images/odontologiagral.webp");
+	}
 
-    &--5 {
-        @include bkg_img("../images/ortodoncia.webp");
-    }
+	&--5 {
+		@include bkg_img("../images/ortodoncia.webp");
+	}
 
-    &--6 {
-        @include bkg_img("../images/protesis.webp");
-    }
+	&--6 {
+		@include bkg_img("../images/protesis.webp");
+	}
 
-    &-content {
-        padding: 1rem;
-        background: linear-gradient(black, rgba(0, 0, 0, 0.5));
-        align-self: flex-end;
+	&-content {
+		padding: 1rem;
+		background: linear-gradient(black, rgba(0, 0, 0, 0.5));
+		align-self: flex-end;
 
-        &__title {
-            font-weight: 700;
-            text-decoration: none;
-            text-decoration-color: map-get($colors , color-cremita);
-        }
-    }
+		&__title {
+			font-weight: 700;
+			text-decoration: none;
+			text-decoration-color: map-get($colors , color-cremita);
+		}
+	}
 }
 
 .card .card:hover,
 .card:focus-within {
-    transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 .card .card-content__body {
-    color: map-get($colors , color-cremita);
-    font-size: 0.8rem;
+	color: map-get($colors , color-cremita);
+	font-size: 0.8rem;
 }
 
 /*consultar si el mecanismo de entrada primario del usuario
 puede hacer hover*/
 
 @media (hover) {
-    .card-content {
-        transform: translateY(70%);
-        transition: transform 500ms ease;
-    }
+	.card-content {
+		transform: translateY(70%);
+		transition: transform 500ms ease;
+	}
 
-    .card:hover .card-content {
-        transform: translateY(0);
-        transition-delay: 500ms;
-    }
+	.card:hover .card-content {
+		transform: translateY(0);
+		transition-delay: 500ms;
+	}
 }
 
 .button {
-    cursor: pointer;
-    display: inline-block;
-    text-decoration: none;
-    color: map-get($colors , color-cremita);
-    background-color: black;
-    padding: 0.2rem 1rem;
-    border-radius: 0.25rem;
-    transition: all 0.5s ease;
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	color: map-get($colors , color-cremita);
+	background-color: black;
+	padding: 0.2rem 1rem;
+	border-radius: 0.25rem;
+	transition: all 0.5s ease;
 }
 
 .button:hover,
 .button:focus {
-    background-color: map-get($colors , color-cremita);
-    color: black;
+	background-color: map-get($colors , color-cremita);
+	color: black;
 }
 
 /* Media query para estructura GRID de MAIN en Tablets y PC*/
 
 @media (min-width: 992px) {
 
-    /* Escondo las tarjetas y el logo para vista Tablets y PC*/
+	/* Escondo las tarjetas y el logo para vista Tablets y PC*/
 
-    .cards--container {
-        display: none;
-    }
+	.cards--container {
+		display: none;
+	}
 
-    /*     .logo_texto {
+	/*     .logo_texto {
         display: none;
     } */
 
-    /* Muestro el carrousel para vista Tablets y PC*/
+	/* Muestro el carrousel para vista Tablets y PC*/
 
-    #carouselExampleCaptions {
-        display: inline-block;
-    }
+	#carouselExampleCaptions {
+		display: inline-block;
+	}
 
-    .carousel-control-next-icon,
-    .carousel-control-prev-icon {
-        filter: drop-shadow(2px 2px 4px rgb(0, 0, 0, 0.75));
-    }
+	.carousel-control-next-icon,
+	.carousel-control-prev-icon {
+		filter: drop-shadow(2px 2px 4px rgb(0, 0, 0, 0.75));
+	}
 
-    .grid--container {
-        grid-template-areas:
-            "header  header"
-            "sidebar main"
-            "footer  footer";
-        grid-template-rows: auto 1fr auto;
-        grid-template-columns: 100px auto;
-    }
+	.grid--container {
+		grid-template-areas:
+			"header  header"
+			"sidebar main"
+			"footer  footer";
+		grid-template-rows: auto 1fr auto;
+		grid-template-columns: 100px auto;
+	}
 
-    .display-1 {
-        &--intro {
-            font-size: 2.5rem;
-        }
+	.display-1 {
+		&--intro {
+			font-size: 2.5rem;
+		}
 
-        &--subtitle {
-            font-size: 2rem;
-        }
+		&--subtitle {
+			font-size: 2rem;
+		}
 
-        &--description {
-            font-size: 1.2rem;
-        }
-    }
+		&--description {
+			font-size: 1.2rem;
+		}
+	}
 }
