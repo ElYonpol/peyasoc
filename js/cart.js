@@ -42,6 +42,7 @@ function login() {
 			);
 		} while (nombreUsuario === "");
 	}
+	prompt("Bienvenido " + nombreUsuario.toUpperCase());
 }
 
 function carritoCompras() {
