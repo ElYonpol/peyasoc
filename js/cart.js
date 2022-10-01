@@ -28,11 +28,11 @@ const producto4 = new Producto("Ortodoncia convencional (braquets)", 75000, 0);
 const producto5 = new Producto("Implante y Corona", 95000, 0);
 const producto6 = new Producto("Placa Miorelajante", 45000, 0);
 
-//Consulto al usuario su nombre, qué artículos quiere comprar y
+//Consulto al usuario su nombre, verifico que no cargue una cadena vacía.
+//Luego qué artículos quiere comprar y
 //qué cantidad de cada uno, hasta que presione la tecla para salir.
-//Verifico que el dato cargado sea un número, .
+//Verifico que el dato cargado sea un número.
 
-//Función para cargar las cantidades de los 3 primeros artículos ofrecidos
 function login() {
 	let nombreUsuario = prompt("Por favor ingrese su nombre:");
 	if (nombreUsuario === "") {
@@ -45,6 +45,7 @@ function login() {
 	alert("Bienvenido " + nombreUsuario.toUpperCase());
 }
 
+//Función para cargar las cantidades de los 3 primeros artículos ofrecidos
 function carritoCompras() {
 	//debugger;
 
