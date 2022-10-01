@@ -42,7 +42,7 @@ function login() {
 			);
 		} while (nombreUsuario === "");
 	}
-	prompt("Bienvenido " + nombreUsuario.toUpperCase());
+	alert("Bienvenido " + nombreUsuario.toUpperCase());
 }
 
 function carritoCompras() {
@@ -52,9 +52,7 @@ function carritoCompras() {
 		do {
 			producto0.cantidad = parseInt(
 				prompt(
-					"Bienvenido " +
-						nombreUsuario.toUpperCase() +
-						"\n\nIngrese la cantidad del servicio de \n" +
+					"Ingrese la cantidad del servicio de \n" +
 						producto0.articulo.toUpperCase() +
 						" que desea adquirir:"
 				)
@@ -71,9 +69,7 @@ function carritoCompras() {
 			do {
 				producto1.cantidad = parseInt(
 					prompt(
-						"Bienvenido " +
-							nombreUsuario.toUpperCase() +
-							"\n\nIngrese la cantidad del servicio de \n" +
+						"Ingrese la cantidad del servicio de \n" +
 							producto1.articulo.toUpperCase() +
 							" que desea adquirir:"
 					)
@@ -90,9 +86,7 @@ function carritoCompras() {
 				do {
 					producto2.cantidad = parseInt(
 						prompt(
-							"Bienvenido " +
-								nombreUsuario.toUpperCase() +
-								"\n\nIngrese la cantidad del servicio de \n" +
+							"Ingrese la cantidad del servicio de \n" +
 								producto2.articulo.toUpperCase() +
 								" que desea adquirir:"
 						)
