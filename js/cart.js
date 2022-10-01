@@ -47,7 +47,7 @@ function login() {
 
 //Función para cargar las cantidades de los 3 primeros artículos ofrecidos
 function carritoCompras() {
-	//debugger;
+	debugger;
 
 	if (isNaN(producto0.cantidad) || producto0.cantidad <= 0) {
 		do {
@@ -96,10 +96,10 @@ function carritoCompras() {
 			}
 			totalArticulosComprados++;
 			compraTotalConIVA = compraTotalConIVA + producto2.precioTotalConIVA();
-			precioPromedioCompra = compraTotalConIVA / totalArticulosComprados;
 		}
 	}
-
+	
+	precioPromedioCompra = compraTotalConIVA / totalArticulosComprados;
 	compraTotalConIVAFormat = compraTotalConIVA.toLocaleString();
 	precioPromedioCompraFormat = precioPromedioCompra.toLocaleString();
 
