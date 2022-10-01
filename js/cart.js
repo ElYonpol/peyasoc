@@ -33,10 +33,7 @@ const producto6 = new Producto("Placa Miorelajante", 45000, 0);
 //Verifico que el dato cargado sea un número, .
 
 //Función para cargar las cantidades de los 3 primeros artículos ofrecidos
-
-function carritoCompras() {
-	//debugger;
-
+function login() {
 	let nombreUsuario = prompt("Por favor ingrese su nombre:");
 	if (nombreUsuario === "") {
 		do {
@@ -45,6 +42,10 @@ function carritoCompras() {
 			);
 		} while (nombreUsuario === "");
 	}
+}
+
+function carritoCompras() {
+	//debugger;
 
 	if (isNaN(producto0.cantidad) || producto0.cantidad <= 0) {
 		do {
@@ -128,5 +129,7 @@ function carritoCompras() {
 	producto1.cantidad = 0;
 	producto2.cantidad = 0;
 }
+
+login();
 
 //carritoCompras();
