@@ -22,11 +22,10 @@
 
 		<!-- Librerías de animación CSS (https://animate.style/#documentation)
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/> -->
 
 		<!-- GOOGLE FONTS -->
 
@@ -65,6 +64,7 @@
 		<!-- Código JavaScript e-Commerce -->
 
 		<script defer src="../js/cart.js"></script>
+		<script defer src="../js/products.js"></script>
 
 		<title>Portas Esquivel & Asociados | Compras</title>
 	</head>
@@ -132,6 +132,30 @@
 					<div class="display-1--intro">Adquiera su producto o servicio</div>
 				</h1>
 
+				<span
+					class="display-1 display-1--subtitle"
+					id="verCarrito"
+					title="Mostrar el contenido del carrito a través del console.log"
+				>
+					Ver Carrito 🛒
+				</span>
+
+				<span
+					class="display-1 display-1--subtitle"
+					id="ordenaCarrito"
+					title="Mostrar el contenido del carrito ordenado por artículo a través del console.log"
+				>
+					Ordenar Carrito por nombre 🛒⬆
+				</span>
+
+				<span
+				class="display-1 display-1--subtitle"
+				id="vaciaCarrito"
+				title="Vaciar el contenido del carrito"
+			>
+				Vaciar Carrito 🛒❗
+			</span>
+
 				<!-- CARDS PARA EL e-COMMERCE - Todas las vistas -->
 
 				<div class="cartCards--container">
@@ -142,9 +166,7 @@
 								Tratamientos especializados para lograr una sonrisa radiante y
 								sana.
 							</p>
-							<a href="#" class="button" onclick="carritoCompras()"
-								>Agregar 🛒</a
-							>
+							<a href="#" class="button-cart" id="blanquea">Agregar 🛒</a>
 						</div>
 					</div>
 
@@ -155,9 +177,7 @@
 								La solución completa a cada caso que se presenta para poder
 								disfrutar de una masticación adecuada.
 							</p>
-							<a href="#" class="button" onclick="carritoCompras()"
-								>Agregar 🛒</a
-							>
+							<a href="#" class="button-cart" id="protcomp">Agregar 🛒</a>
 						</div>
 					</div>
 
@@ -168,9 +188,7 @@
 								La solución flexible a cada caso que se presenta para poder
 								disfrutar de una masticación adecuada.
 							</p>
-							<a href="#" class="button" onclick="carritoCompras()"
-								>Agregar 🛒</a
-							>
+							<a href="#" class="button-cart" id="protflex">Agregar 🛒</a>
 						</div>
 					</div>
 
@@ -181,9 +199,7 @@
 								La solución en Cromo-Cobalto a cada caso que se presenta para
 								poder disfrutar de una masticación adecuada.
 							</p>
-							<a href="#" class="button" onclick="carritoCompras()"
-								>Agregar 🛒</a
-							>
+							<a href="#" class="button-cart" id="protcrco">Agregar 🛒</a>
 						</div>
 					</div>
 
@@ -197,9 +213,7 @@
 								previene y corrige anomalías de posición tanto óseas como
 								dentales.
 							</p>
-							<a href="#" class="button" onclick="carritoCompras()"
-								>Agregar 🛒</a
-							>
+							<a href="#" class="button-cart" id="ortbraqt">Agregar 🛒</a>
 						</div>
 					</div>
 
@@ -210,9 +224,7 @@
 								La solución en implantes y coronas a cada caso que se presenta
 								para poder disfrutar de una masticación adecuada.
 							</p>
-							<a href="#" class="button" onclick="carritoCompras()"
-								>Agregar 🛒</a
-							>
+							<a href="#" class="button-cart" id="implycor">Agregar 🛒</a>
 						</div>
 					</div>
 
@@ -223,9 +235,7 @@
 								La solución en tratamientos activos de eliminación de los
 								efectos del bruxismo.
 							</p>
-							<a href="#" class="button" onclick="carritoCompras()"
-								>Agregar 🛒</a
-							>
+							<a href="#" class="button-cart" id="placamre">Agregar 🛒</a>
 						</div>
 					</div>
 				</div>

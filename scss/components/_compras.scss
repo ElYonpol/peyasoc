@@ -20,6 +20,10 @@
 	transition: transform 500ms ease;
 	box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 
+	&-content {
+		min-height: 220px;
+	}
+
 	&--0 {
 		@include bkg_img("../images/cartCard--0.webp");
 	}
@@ -84,4 +88,27 @@ puede hacer hover*/
 		transform: translateY(0);
 		transition-delay: 500ms;
 	}
+}
+
+.button-cart {
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	color: map-get($colors , color-cremita);
+	background-color: black;
+	padding: 0.2rem 1rem;
+	border-radius: 0.25rem;
+	transition: all 0.5s ease;
+}
+
+.button-cart:hover,
+.button-cart:focus {
+	background-color: map-get($colors , color-cremita);
+	color: black;
+}
+
+#verCarrito, #ordenaCarrito, #vaciaCarrito {
+	cursor: pointer;
+	width: 100%;
+	align-self: center;
 }

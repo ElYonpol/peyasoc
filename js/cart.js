@@ -1,131 +1,138 @@
-//Función Constructora para la página de e-commerce
+//Llamo al DOM para conectarme con los botones de "Agregar al carrito" y "Ver Carrito"
+//y le agrego el EVENT Listener
+const activateCartButtons = () => {
+	const addButtons = document.querySelectorAll("a.button-cart");
+	addButtons.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			//console.log(btn.id);
+			addToCart(btn.id);
+		});
+	});
+};
 
-const IVA = 1.21;
-
-class Producto {
-	constructor(articulo, precio, cantidad) {
-		this.articulo = articulo;
-		this.precio = precio;
-		this.cantidad = cantidad;
+//Función para mostrar los contenidos del carrito de compras
+const mostrarCarrito = () => {
+	if (cart.length !== 0) {
+		console.table(cart);
+	} else {
+		console.warn("❕ Atención, el carrito está vacío.");
 	}
+};
 
-	precioUnitarioConIVA() {
-		return this.precio * IVA;
-	}
+//Llamo al DOM para conectarme con el texto de "Ver Carrito", "Ordenar Carrito", "Vaciar Carrito"
+//y le agrego el EVENT Listener
+const verCarrito = document.querySelector("span#verCarrito");
+verCarrito.addEventListener("click", mostrarCarrito);
 
-	precioTotalConIVA() {
-		return this.precio * IVA * this.cantidad;
-	}
-}
+const ordenaCarrito = document.querySelector("span#ordenaCarrito");
+ordenaCarrito.addEventListener("click", ordenarCarrito);
 
-//Genero 7 artículos de prueba para la página de e-commerce
+const vaciaCarrito = document.querySelector("span#vaciaCarrito");
+vaciaCarrito.addEventListener("click", vaciarCarrito);
 
-const producto0 = new Producto("Blanqueamiento", 5000, 0);
-const producto1 = new Producto("Prótesis Completa", 25000, 0);
-const producto2 = new Producto("Prótesis Flexible", 15000, 0);
-const producto3 = new Producto("Prótesis Cromo-Cobalto", 35000, 0);
-const producto4 = new Producto("Ortodoncia convencional (braquets)", 75000, 0);
-const producto5 = new Producto("Implante y Corona", 95000, 0);
-const producto6 = new Producto("Placa Miorelajante", 45000, 0);
+//Genero un objeto carrito vacío para usarlo luego en la función correspondiente
+const cart = [];
+
+//Genero las variables en las que voy a acumular la cantidad de artículos y el total de la compra
+let totalArticulosComprados = 0;
+let compraTotalConIVA = 0;
 
 //Consulto al usuario su nombre, verifico que no cargue una cadena vacía.
-//Luego qué artículos quiere comprar y
-//qué cantidad de cada uno, hasta que presione la tecla para salir.
-//Verifico que el dato cargado sea un número.
 
 function login() {
 	let nombreUsuario = prompt("Por favor ingrese su nombre:");
 	if (nombreUsuario === "") {
 		do {
 			nombreUsuario = prompt(
-				"El nombre ingresado no puede estar vacío. Por favor ingrese su nombre:"
+				"⛔ El nombre ingresado no puede estar vacío. \n Por favor ingrese su nombre:"
 			);
 		} while (nombreUsuario === "");
 	}
 	alert("Bienvenido " + nombreUsuario.toUpperCase());
+	return nombreUsuario;
 }
 
-//Función para cargar las cantidades de los 3 primeros artículos ofrecidos
-function carritoCompras() {
-	debugger;
+idUsuario = login();
 
-	if (isNaN(producto0.cantidad) || producto0.cantidad <= 0) {
-		do {
-			producto0.cantidad = parseInt(
-				prompt(
-					"Ingrese la cantidad del servicio de \n" +
-						producto0.articulo.toUpperCase() +
-						" que desea adquirir:"
-				)
-			);
-		} while (isNaN(producto0.cantidad) || producto0.cantidad <= 0);
-	}
-	let totalArticulosComprados = 1;
-	let compraTotalConIVA = producto0.precioTotalConIVA();
-	let continuarCompra = confirm(
-		"¿Desea continuar su compra con el siguiente servicio?"
-	);
-	if (continuarCompra) {
-		if (isNaN(producto1.cantidad) || producto1.cantidad <= 0) {
-			do {
-				producto1.cantidad = parseInt(
-					prompt(
-						"Ingrese la cantidad del servicio de \n" +
-							producto1.articulo.toUpperCase() +
-							" que desea adquirir:"
-					)
-				);
-			} while (isNaN(producto1.cantidad) || producto1.cantidad <= 0);
-		}
-		totalArticulosComprados++;
-		compraTotalConIVA = compraTotalConIVA + producto1.precioTotalConIVA();
-		continuarCompra = confirm(
-			"¿Desea continuar su compra con el siguiente servicio?"
+//Llamo a la función para activar los botones de agregar servicios al carrito
+activateCartButtons();
+
+//Función para ir agregando servicios al carrito de compras
+const addToCart = (servicio) => {
+	//debugger;
+	let result = products.find((prod) => prod.articulo === servicio);
+	if (result !== undefined) {
+		result.cantidad = 1;
+		let auxPrecioConIVA = result.precio * IVA; //Variable auxiliar para calcular el precio UNITARIO con IVA
+
+		cart.push(result);
+
+		//Con el método REDUCE calculo el total acumulado del precio con IVA del carrito
+		compraTotalConIVA = cart.reduce(
+			(acc, result) => acc + result.precio * IVA,
+			0
 		);
-		if (continuarCompra) {
-			if (isNaN(producto2.cantidad) || producto2.cantidad <= 0) {
-				do {
-					producto2.cantidad = parseInt(
-						prompt(
-							"Ingrese la cantidad del servicio de \n" +
-								producto2.articulo.toUpperCase() +
-								" que desea adquirir:"
-						)
-					);
-				} while (isNaN(producto2.cantidad) || producto2.cantidad <= 0);
-			}
-			totalArticulosComprados++;
-			compraTotalConIVA = compraTotalConIVA + producto2.precioTotalConIVA();
-		}
+
+		totalArticulosComprados = cart.length;
+		precioPromedioCompra = compraTotalConIVA / totalArticulosComprados;
+
+		alert(
+			idUsuario +
+				", el artículo " +
+				result.descripcion +
+				" por un valor con IVA de $" +
+				auxPrecioConIVA.toLocaleString() +
+				" fue agregado con éxito al carrito. ✔\n" +
+				"El total de los artículos en el carrito al momento es de " +
+				totalArticulosComprados +
+				" y el monto total con IVA del carrito es de $" +
+				compraTotalConIVA.toLocaleString() +
+				", lo que representa un precio promedio con IVA de $" +
+				precioPromedioCompra.toLocaleString() +
+				"."
+		);
+		console.clear();
+		console.table(cart);
+		console.log(
+			"El total de artículos comprados hasta ahora es de " +
+				totalArticulosComprados +
+				" artículos.\n" +
+				"El monto total con IVA de la compra asciende a $" +
+				compraTotalConIVA.toLocaleString() +
+				".\n" +
+				"El precio promedio al momento es de $" +
+				precioPromedioCompra.toLocaleString() +
+				"."
+		);
+	} else {
+		console.error("⛔ El servicio que está intentando agregar no existe.");
 	}
-	
-	precioPromedioCompra = compraTotalConIVA / totalArticulosComprados;
-	compraTotalConIVAFormat = compraTotalConIVA.toLocaleString();
-	precioPromedioCompraFormat = precioPromedioCompra.toLocaleString();
+};
 
-	let resumenCompraTotal =
-		"El precio total de su compra es de $" +
-		compraTotalConIVAFormat +
-		" en un total de " +
-		totalArticulosComprados +
-		" artículo(s).";
-
-	let promedioCompraTotal =
-		"El precio promedio por artículo de su compra es de $" +
-		precioPromedioCompraFormat +
-		". \nGracias por su compra.";
-
-	alert(resumenCompraTotal + "\n" + promedioCompraTotal);
-
-	console.log(resumenCompraTotal);
-	console.log(promedioCompraTotal);
-
-	//Borro las cantidades para una nueva carga del carrito de compras
-	producto0.cantidad = 0;
-	producto1.cantidad = 0;
-	producto2.cantidad = 0;
+//Función para ordenar los productos del carrito por el nombre del servicio
+function ordenarCarrito() {
+	if (cart.length !== 0) {
+		let carritoOrdenado = cart.sort((a, b) => {
+			if (a.articulo > b.articulo) {
+				return 1;
+			}
+			if (a.articulo < b.articulo) {
+				return -1;
+			}
+			return 0;
+		});
+		console.table(carritoOrdenado);
+	} else {
+		console.warn("❕ Atención, el carrito está vacío.");
+	}
 }
 
-login();
-
-//carritoCompras();
+function vaciarCarrito() {
+	if (cart.length !== 0) {
+		cart.splice(0, cart.length);
+		console.log("El carrito ha sido vaciado.");
+		console.table(cart);
+	} else {
+		console.warn("❕ Atención, el carrito está vacío.");
+	}
+}

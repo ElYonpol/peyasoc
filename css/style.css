@@ -693,6 +693,9 @@ footer {
   transition: transform 500ms ease;
   box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 }
+.cartCard-content {
+  min-height: 220px;
+}
 .cartCard--0 {
   background-image: url("../images/cartCard--0.webp");
   background-size: cover;
@@ -753,6 +756,28 @@ puede hacer hover*/
     transform: translateY(0);
     transition-delay: 500ms;
   }
+}
+.button-cart {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff7ef;
+  background-color: black;
+  padding: 0.2rem 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.5s ease;
+}
+
+.button-cart:hover,
+.button-cart:focus {
+  background-color: #fff7ef;
+  color: black;
+}
+
+#verCarrito, #ordenaCarrito, #vaciaCarrito {
+  cursor: pointer;
+  width: 100%;
+  align-self: center;
 }
 
 /*# sourceMappingURL=style.css.map */
