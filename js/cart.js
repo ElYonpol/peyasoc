@@ -41,12 +41,12 @@ let compraTotalConIVA = 0;
 
 function login() {
 	let nombreUsuario = prompt("Por favor ingrese su nombre:");
-	if (nombreUsuario === "") {
+	if (nombreUsuario === "" || nombreUsuario === null) {
 		do {
 			nombreUsuario = prompt(
 				"⛔ El nombre ingresado no puede estar vacío. \n Por favor ingrese su nombre:"
 			);
-		} while (nombreUsuario === "");
+		} while (nombreUsuario === "" || nombreUsuario === null);
 	}
 	alert("Bienvenido " + nombreUsuario.toUpperCase());
 	return nombreUsuario;
