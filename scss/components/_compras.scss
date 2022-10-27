@@ -21,7 +21,7 @@
 	box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 
 	&-content {
-		min-height: 220px;
+		min-height: 230px;
 	}
 
 	&--0 {
@@ -111,4 +111,10 @@ puede hacer hover*/
 	cursor: pointer;
 	width: 100%;
 	align-self: center;
+}
+
+.eliminarProducto {
+	font-weight: 700;
+	cursor: pointer;
+	color: red;
 }

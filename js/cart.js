@@ -1,23 +1,65 @@
-//Llamo al DOM para conectarme con los botones de "Agregar al carrito" y "Ver Carrito"
+//Genero un objeto carrito vacío para usarlo luego en la función correspondiente
+const cart = [];
+
+//Genero las variables en las que voy a acumular la cantidad de artículos y el total de la compra
+let totalArticulosComprados = 0;
+let compraTotalConIVA = 0;
+
+//Llamo al DOM para conectarme con los botones de "Agregar al carrito"
 //y le agrego el EVENT Listener
 const activateCartButtons = () => {
-	const addButtons = document.querySelectorAll("a.button-cart");
+	const addButtons = document.querySelectorAll(".button-cart");
 	addButtons.forEach((btn) => {
 		btn.addEventListener("click", () => {
-			//console.log(btn.id);
 			addToCart(btn.id);
 		});
 	});
 };
 
 //Función para mostrar los contenidos del carrito de compras
-const mostrarCarrito = () => {
-	if (cart.length !== 0) {
-		console.table(cart);
+const loadCart = () => {
+	if (localStorage.getItem("cart")) {
+		let loadedCart = JSON.parse(localStorage.getItem("cart"));
+		loadedCart.forEach((product) => cart.push(product));
 	} else {
-		console.warn("❕ Atención, el carrito está vacío.");
+		alerta(
+			"Error",
+			"Atención, no se encontró un carrito previamente guardado.",
+			"error"
+		);
 	}
 };
+loadCart();
+
+const showUserCart = document.querySelector(".userCart");
+
+const mostrarCarrito = () => {
+	showUserCart.innerHTML = "";
+	if (cart.length !== 0) {
+		//debugger;
+		console.table(cart);
+		cart.forEach((product) => {
+			showUserCart.innerHTML += tableCart(product);
+		});
+
+		compraTotalConIVA = cart.reduce(
+			(acc, result) => acc + result.precio * IVA,
+			0
+		);
+
+		showUserCart.innerHTML += `<tr class="fw-bold">
+				<th scope="row">Total</th>
+				<td>${compraTotalConIVA.toLocaleString()}</td>
+				<td></td>
+				<td></td>
+			</tr>`;
+	} else {
+		alerta("Error", "Atención: el carrito está vacío.", "error");
+	}
+};
+
+//Llamo al DOM para contectarme con el div contenedor y generar las cards con los servicios
+const containerServicios = document.querySelector("div.cartCards--container");
 
 //Llamo al DOM para conectarme con el texto de "Ver Carrito", "Ordenar Carrito", "Vaciar Carrito"
 //y le agrego el EVENT Listener
@@ -30,32 +72,16 @@ ordenaCarrito.addEventListener("click", ordenarCarrito);
 const vaciaCarrito = document.querySelector("span#vaciaCarrito");
 vaciaCarrito.addEventListener("click", vaciarCarrito);
 
-//Genero un objeto carrito vacío para usarlo luego en la función correspondiente
-const cart = [];
-
-//Genero las variables en las que voy a acumular la cantidad de artículos y el total de la compra
-let totalArticulosComprados = 0;
-let compraTotalConIVA = 0;
-
-//Consulto al usuario su nombre, verifico que no cargue una cadena vacía.
-
-function login() {
-	let nombreUsuario = prompt("Por favor ingrese su nombre:");
-	if (nombreUsuario === "" || nombreUsuario === null) {
-		do {
-			nombreUsuario = prompt(
-				"⛔ El nombre ingresado no puede estar vacío. \n Por favor ingrese su nombre:"
-			);
-		} while (nombreUsuario === "" || nombreUsuario === null);
-	}
-	alert("Bienvenido " + nombreUsuario.toUpperCase());
-	return nombreUsuario;
-}
-
-idUsuario = login();
-
-//Llamo a la función para activar los botones de agregar servicios al carrito
-activateCartButtons();
+//Recorro el array de productos y armo las cards para cargarlas en pantalla
+const loadCards = () => {
+	//debugger
+	containerServicios.innerHTML = "";
+	products.forEach(
+		(producto) => (containerServicios.innerHTML += returnCard(producto))
+	);
+	activateCartButtons(); //Llamo a la función para activar los botones de agregar servicios al carrito
+};
+loadCards();
 
 //Función para ir agregando servicios al carrito de compras
 const addToCart = (servicio) => {
@@ -66,46 +92,18 @@ const addToCart = (servicio) => {
 		let auxPrecioConIVA = result.precio * IVA; //Variable auxiliar para calcular el precio UNITARIO con IVA
 
 		cart.push(result);
-
-		//Con el método REDUCE calculo el total acumulado del precio con IVA del carrito
-		compraTotalConIVA = cart.reduce(
-			(acc, result) => acc + result.precio * IVA,
-			0
-		);
-
-		totalArticulosComprados = cart.length;
-		precioPromedioCompra = compraTotalConIVA / totalArticulosComprados;
-
-		alert(
-			idUsuario +
-				", el artículo " +
-				result.descripcion +
-				" por un valor con IVA de $" +
-				auxPrecioConIVA.toLocaleString() +
-				" fue agregado con éxito al carrito. ✔\n" +
-				"El total de los artículos en el carrito al momento es de " +
-				totalArticulosComprados +
-				" y el monto total con IVA del carrito es de $" +
-				compraTotalConIVA.toLocaleString() +
-				", lo que representa un precio promedio con IVA de $" +
-				precioPromedioCompra.toLocaleString() +
-				"."
-		);
-		console.clear();
-		console.table(cart);
-		console.log(
-			"El total de artículos comprados hasta ahora es de " +
-				totalArticulosComprados +
-				" artículos.\n" +
-				"El monto total con IVA de la compra asciende a $" +
-				compraTotalConIVA.toLocaleString() +
-				".\n" +
-				"El precio promedio al momento es de $" +
-				precioPromedioCompra.toLocaleString() +
-				"."
+		saveCart(); //Guardo el contenido del carrito en localStorage
+		toast(
+			`${result.title} se agregó al carrito.`,
+			3000,
+			"linear-gradient(to right, #00b09b, #96c93d)"
 		);
 	} else {
-		console.error("⛔ El servicio que está intentando agregar no existe.");
+		alerta(
+			"Error",
+			"El servicio que está intentando agregar no existe.",
+			"error"
+		);
 	}
 };
 
@@ -121,18 +119,39 @@ function ordenarCarrito() {
 			}
 			return 0;
 		});
-		console.table(carritoOrdenado);
+		mostrarCarrito();
+		toast(
+			"Carrito ordenado",
+			3000,
+			"linear-gradient(to right, #00b09b, #96c93d)"
+		);
 	} else {
-		console.warn("❕ Atención, el carrito está vacío.");
+		alerta("Error", "Atención: el carrito está vacío.", "error");
 	}
 }
 
+//Función para vaciar los productos del carrito
 function vaciarCarrito() {
+	showUserCart.innerHTML = "";
+	localStorage.removeItem("cart");
 	if (cart.length !== 0) {
 		cart.splice(0, cart.length);
-		console.log("El carrito ha sido vaciado.");
+
+		toast(
+			"El carrito ha sido vaciado.",
+			3000,
+			"linear-gradient(to right, #D40F22, #E74C3C)"
+		);
+		console.log("");
 		console.table(cart);
 	} else {
-		console.warn("❕ Atención, el carrito está vacío.");
+		alerta("Error", "Atención: el carrito está vacío.", "error");
 	}
 }
+
+//Funciones para guardar y recuperar el contenido del carrito usando localStorage
+const saveCart = () => {
+	if (cart.length > 0) {
+		localStorage.setItem("cart", JSON.stringify(cart));
+	}
+};
