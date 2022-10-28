@@ -60,7 +60,11 @@ const mostrarCarrito = () => {
 
 		showUserCart.innerHTML += `<tr class="fw-bold">
 				<th scope="row">Total</th>
-				<td>${compraTotalConIVA.toLocaleString()}</td>
+				<td>${compraTotalConIVA.toLocaleString("locale", {
+					style: "currency",
+					currency: "ARS",
+					maximumFractionDigits: 0,
+				})}</td>
 				<td></td>
 				<td></td>
 			</tr>`;
@@ -140,7 +144,12 @@ const deleteCartItem = (servicioEliminar) => {
 
 		if (resultEliminar !== undefined) {
 			if (cartItemExists !== undefined) {
-				cart.splice(resultEliminar.articulo, 1);
+				console.table(cart);
+				const itemEliminar = cart.findIndex((cartItem) => {
+					return cartItem.articulo === servicioEliminar;
+				});
+				console.log(itemEliminar);
+				cart.splice(itemEliminar, 1);
 			} else {
 				alerta(
 					"Error",
@@ -148,8 +157,8 @@ const deleteCartItem = (servicioEliminar) => {
 					"error"
 				);
 			}
-			mostrarCarrito();
 			saveCart(); //Guardo el contenido del carrito en localStorage
+			mostrarCarrito();
 			toast(
 				`${resultEliminar.title} se eliminó del carrito.`,
 				3000,
