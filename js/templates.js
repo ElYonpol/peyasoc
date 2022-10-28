@@ -22,9 +22,9 @@ const returnError = () => {
 const tableCart = (cartItem) => {
 	return `<tr>
                 <th scope="row">${cartItem.title}</th>
-                <td>${(cartItem.precio*IVA).toLocaleString()}</td>
+                <td>${(cartItem.precio * cartItem.cantidad * IVA).toLocaleString()}</td>
                 <td>${cartItem.cantidad}</td>
-                <td><span class="eliminarProducto">X</span></td>
+                <td><span class="eliminarProducto" id="${cartItem.articulo}" title="Haga click para eliminar '${cartItem.title}' del carrito">X</span></td>
             </tr>`;
 };
 
@@ -36,14 +36,14 @@ const alerta = (titulo, mensaje, icono) => {
 		text: mensaje,
 		showConfirmButton: true,
 		//showCloseButton: true,
-        //showCancelButton: true,
+		//showCancelButton: true,
 		//timer: 1500,
 		width: "250px",
 	});
 };
 
 //Creo el aviso de Toastify
-const toast = (mensaje,tiempo,estiloCSS) => {
+const toast = (mensaje, tiempo, estiloCSS) => {
 	Toastify({
 		text: mensaje,
 		duration: tiempo,

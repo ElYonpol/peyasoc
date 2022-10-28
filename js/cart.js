@@ -1,8 +1,7 @@
 //Genero un objeto carrito vacío para usarlo luego en la función correspondiente
 const cart = [];
 
-//Genero las variables en las que voy a acumular la cantidad de artículos y el total de la compra
-let totalArticulosComprados = 0;
+//Genero las variables en las que voy a acumular el total de la compra
 let compraTotalConIVA = 0;
 
 //Llamo al DOM para conectarme con los botones de "Agregar al carrito"
@@ -16,34 +15,46 @@ const activateCartButtons = () => {
 	});
 };
 
+//Llamo al DOM para conectarme con los botones de "Eliminar del carrito"
+//y le agrego el EVENT Listener
+const activateCartItemDeleteButtons = () => {
+	const deleteCartItemBtns = document.querySelectorAll(".eliminarProducto");
+	deleteCartItemBtns.forEach((deleteBtn) => {
+		deleteBtn.addEventListener("click", () => {
+			deleteCartItem(deleteBtn.id);
+		});
+	});
+};
+
 //Función para mostrar los contenidos del carrito de compras
 const loadCart = () => {
 	if (localStorage.getItem("cart")) {
 		let loadedCart = JSON.parse(localStorage.getItem("cart"));
 		loadedCart.forEach((product) => cart.push(product));
 	} else {
-		alerta(
-			"Error",
-			"Atención, no se encontró un carrito previamente guardado.",
-			"error"
+		toast(
+			"Actualmente no hay productos en el carrito.",
+			3000,
+			"linear-gradient(to right, #6f756b, #96c93d)"
 		);
 	}
 };
 loadCart();
 
+//Llamo al DOM para contectarme con la tabla y las filas del carrito
+const showTable = document.querySelector("#cartTable");
 const showUserCart = document.querySelector(".userCart");
 
 const mostrarCarrito = () => {
 	showUserCart.innerHTML = "";
 	if (cart.length !== 0) {
-		//debugger;
-		console.table(cart);
+		showTable.style.display = "";
 		cart.forEach((product) => {
 			showUserCart.innerHTML += tableCart(product);
 		});
 
 		compraTotalConIVA = cart.reduce(
-			(acc, result) => acc + result.precio * IVA,
+			(acc, cartItem) => acc + cartItem.precio * cartItem.cantidad * IVA,
 			0
 		);
 
@@ -53,6 +64,7 @@ const mostrarCarrito = () => {
 				<td></td>
 				<td></td>
 			</tr>`;
+		activateCartItemDeleteButtons();
 	} else {
 		alerta("Error", "Atención: el carrito está vacío.", "error");
 	}
@@ -74,7 +86,6 @@ vaciaCarrito.addEventListener("click", vaciarCarrito);
 
 //Recorro el array de productos y armo las cards para cargarlas en pantalla
 const loadCards = () => {
-	//debugger
 	containerServicios.innerHTML = "";
 	products.forEach(
 		(producto) => (containerServicios.innerHTML += returnCard(producto))
@@ -87,23 +98,73 @@ loadCards();
 const addToCart = (servicio) => {
 	//debugger;
 	let result = products.find((prod) => prod.articulo === servicio);
-	if (result !== undefined) {
-		result.cantidad = 1;
-		let auxPrecioConIVA = result.precio * IVA; //Variable auxiliar para calcular el precio UNITARIO con IVA
+	let cartItemExists = cart.find((cartItem) => cartItem.articulo === servicio);
 
-		cart.push(result);
+	if (result !== undefined) {
+		if (cartItemExists !== undefined) {
+			cartItemExists.cantidad++;
+		} else {
+			result.cantidad = 1;
+			cart.push(result);
+		}
 		saveCart(); //Guardo el contenido del carrito en localStorage
 		toast(
 			`${result.title} se agregó al carrito.`,
 			3000,
 			"linear-gradient(to right, #00b09b, #96c93d)"
 		);
+		if (showTable.style.display === "") {
+			mostrarCarrito();
+		}
 	} else {
 		alerta(
 			"Error",
 			"El servicio que está intentando agregar no existe.",
 			"error"
 		);
+	}
+};
+
+//Función para eliminar un item del carrito
+const deleteCartItem = (servicioEliminar) => {
+	//debugger;
+	if (cart.length === 1) {
+		vaciarCarrito();
+	} else {
+		let resultEliminar = products.find(
+			(prod) => prod.articulo === servicioEliminar
+		);
+		let cartItemExists = cart.find(
+			(cartItem) => cartItem.articulo === servicioEliminar
+		);
+
+		if (resultEliminar !== undefined) {
+			if (cartItemExists !== undefined) {
+				cart.splice(resultEliminar.articulo, 1);
+			} else {
+				alerta(
+					"Error",
+					"El servicio que está intentando eliminar no existe en el carrito.",
+					"error"
+				);
+			}
+			mostrarCarrito();
+			saveCart(); //Guardo el contenido del carrito en localStorage
+			toast(
+				`${resultEliminar.title} se eliminó del carrito.`,
+				3000,
+				"linear-gradient(to right, #D40F22, #E74C3C)"
+			);
+			if (showTable.style.display === "") {
+				mostrarCarrito();
+			}
+		} else {
+			alerta(
+				"Error",
+				"El servicio que está intentando eliminar no existe.",
+				"error"
+			);
+		}
 	}
 };
 
@@ -135,15 +196,15 @@ function vaciarCarrito() {
 	showUserCart.innerHTML = "";
 	localStorage.removeItem("cart");
 	if (cart.length !== 0) {
+		cart.forEach((cartItem) => (cartItem.precio = 0));
+		cart.forEach((cartItem) => (cartItem.cantidad = 0));
 		cart.splice(0, cart.length);
-
 		toast(
 			"El carrito ha sido vaciado.",
 			3000,
 			"linear-gradient(to right, #D40F22, #E74C3C)"
 		);
-		console.log("");
-		console.table(cart);
+		showTable.style.display = "none";
 	} else {
 		alerta("Error", "Atención: el carrito está vacío.", "error");
 	}

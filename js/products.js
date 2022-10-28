@@ -8,7 +8,7 @@ const products = [
 		claseCSS: "cartCard--0",
 		title: "Blanqueamiento",
 		body: "Tratamientos especializados para lograr una sonrisa radiante y sana.",
-		precio: 5000,
+		precio: 1000,
 		cantidad: 0,
 	},
 	{
@@ -16,7 +16,7 @@ const products = [
 		claseCSS: "cartCard--1",
 		title: "Prótesis Completa",
 		body: "La solución completa a cada caso que se presenta para poder disfrutar de una masticación adecuada.",
-		precio: 25000,
+		precio: 2000,
 		cantidad: 0,
 	},
 	{
@@ -24,7 +24,7 @@ const products = [
 		claseCSS: "cartCard--2",
 		title: "Prótesis Flexible",
 		body: "La solución flexible a cada caso que se presenta para poder disfrutar de una masticación adecuada.",
-		precio: 15000,
+		precio: 3000,
 		cantidad: 0,
 	},
 	{
@@ -32,7 +32,7 @@ const products = [
 		claseCSS: "cartCard--3",
 		title: "Prótesis Cromo-Cobalto",
 		body: "La solución en Cromo-Cobalto a cada caso que se presenta para poder disfrutar de una masticación adecuada.",
-		precio: 6000,
+		precio: 4000,
 		cantidad: 0,
 	},
 	{
@@ -40,7 +40,7 @@ const products = [
 		claseCSS: "cartCard--4",
 		title: "Ortodoncia convencional (braquets)",
 		body: "La ortodoncia es una rama de la odontología que estudia, previene y corrige anomalías de posición tanto óseas como dentales.",
-		precio: 75000,
+		precio: 5000,
 		cantidad: 0,
 	},
 	{
@@ -48,7 +48,7 @@ const products = [
 		claseCSS: "cartCard--5",
 		title: "Implante y Corona",
 		body: "La solución en implantes y coronas a cada caso que se presenta para poder disfrutar de una masticación adecuada.",
-		precio: 95000,
+		precio: 6000,
 		cantidad: 0,
 	},
 	{
@@ -56,7 +56,7 @@ const products = [
 		claseCSS: "cartCard--6",
 		title: "Placa Miorelajante",
 		body: "La solución en tratamientos activos de eliminación de los efectos del bruxismo.",
-		precio: 45000,
+		precio: 7000,
 		cantidad: 0,
 	},
 ];
