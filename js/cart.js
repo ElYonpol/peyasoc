@@ -15,13 +15,25 @@ const activateCartButtons = () => {
 	});
 };
 
-//Llamo al DOM para conectarme con los botones de "Eliminar del carrito"
+//Llamo al DOM para conectarme con los botones de "Agregar/Quitar unidad" y "Eliminar del carrito"
 //y le agrego el EVENT Listener
-const activateCartItemDeleteButtons = () => {
+const activateCartItemButtons = () => {
 	const deleteCartItemBtns = document.querySelectorAll(".eliminarProducto");
+	const addUnitCartItemBtns = document.querySelectorAll(".agregarUnidad");
+	const removeUnitCartItemBtns = document.querySelectorAll(".quitarUnidad");
 	deleteCartItemBtns.forEach((deleteBtn) => {
 		deleteBtn.addEventListener("click", () => {
 			deleteCartItem(deleteBtn.id);
+		});
+	});
+	addUnitCartItemBtns.forEach((addUnitbtn) => {
+		addUnitbtn.addEventListener("click", () => {
+			addUnitCartItem(addUnitbtn.id);
+		});
+	});
+	removeUnitCartItemBtns.forEach((removeUnitbtn) => {
+		removeUnitbtn.addEventListener("click", () => {
+			removeUnitCartItem(removeUnitbtn.id);
 		});
 	});
 };
@@ -68,7 +80,7 @@ const mostrarCarrito = () => {
 				<td></td>
 				<td></td>
 			</tr>`;
-		activateCartItemDeleteButtons();
+		activateCartItemButtons();
 	} else {
 		alerta("Error", "Atención: el carrito está vacío.", "error");
 	}
@@ -100,23 +112,23 @@ loadCards();
 
 //Función para ir agregando servicios al carrito de compras
 const addToCart = (servicio) => {
-	//debugger;
 	let result = products.find((prod) => prod.articulo === servicio);
 	let cartItemExists = cart.find((cartItem) => cartItem.articulo === servicio);
 
 	if (result !== undefined) {
 		if (cartItemExists !== undefined) {
-			cartItemExists.cantidad++;
+			//cartItemExists.cantidad++;
+			addUnitCartItem(servicio)
 		} else {
 			result.cantidad = 1;
 			cart.push(result);
+			toast(
+				`${result.title} se agregó al carrito.`,
+				3000,
+				"linear-gradient(to right, #00b09b, #96c93d)"
+			);
 		}
 		saveCart(); //Guardo el contenido del carrito en localStorage
-		toast(
-			`${result.title} se agregó al carrito.`,
-			3000,
-			"linear-gradient(to right, #00b09b, #96c93d)"
-		);
 		if (showTable.style.display === "") {
 			mostrarCarrito();
 		}
@@ -126,6 +138,42 @@ const addToCart = (servicio) => {
 			"El servicio que está intentando agregar no existe.",
 			"error"
 		);
+	}
+};
+
+//Función para agregar 1 unidad a un item del carrito
+const addUnitCartItem = (itemAgregar) => {
+	let resultAgregar = cart.find((prod) => prod.articulo === itemAgregar);
+	resultAgregar.cantidad++;
+	saveCart(); //Guardo el contenido del carrito en localStorage
+	mostrarCarrito();
+	toast(
+		`Se agregó 1 unidad de ${resultAgregar.title}.`,
+		3000,
+		"linear-gradient(to right, #00b09b, #96c93d)"
+	);
+	if (showTable.style.display === "") {
+		mostrarCarrito();
+	}
+};
+
+//Función para quitar 1 unidad a un item del carrito
+const removeUnitCartItem = (itemQuitar) => {
+	let resultQuitar = cart.find((prod) => prod.articulo === itemQuitar);
+	if (resultQuitar.cantidad === 1) {
+		deleteCartItem(itemQuitar);
+	} else {
+		resultQuitar.cantidad--;
+		saveCart(); //Guardo el contenido del carrito en localStorage
+		mostrarCarrito();
+		toast(
+			`Se eliminó 1 unidad de ${resultQuitar.title}.`,
+			3000,
+			"linear-gradient(to right, #D40F22, #E74C3C)"
+		);
+		if (showTable.style.display === "") {
+			mostrarCarrito();
+		}
 	}
 };
 
@@ -144,11 +192,9 @@ const deleteCartItem = (servicioEliminar) => {
 
 		if (resultEliminar !== undefined) {
 			if (cartItemExists !== undefined) {
-				console.table(cart);
 				const itemEliminar = cart.findIndex((cartItem) => {
 					return cartItem.articulo === servicioEliminar;
 				});
-				console.log(itemEliminar);
 				cart.splice(itemEliminar, 1);
 			} else {
 				alerta(

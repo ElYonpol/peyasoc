@@ -152,14 +152,18 @@
 				<span
 					class="display-1 display-1--subtitle"
 					id="verCarrito"
-					title="Mostrar el contenido del carrito a través del console.log"
+					title="Mostrar el contenido del carrito"
 				>
 					Ver Carrito 🛒
 				</span>
 
 				<!-- Tabla oculta que se muestra sólo con el contenido del carrito -->
 				<div class="table-responsive align-self-center w-75">
-					<table id="cartTable" class="table table-striped align-self-center text-center" style="display:none">
+					<table
+						id="cartTable"
+						class="table table-striped align-self-center text-center"
+						style="display: none"
+					>
 						<thead class="table-dark">
 							<tr>
 								<th scope="col">Servicio</th>
@@ -169,12 +173,7 @@
 							</tr>
 						</thead>
 						<tbody class="userCart">
-<!-- 						<tr>
-								<th scope="row">1</th>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>@mdo</td>
-							</tr> -->
+							<!-- Contenido cargado de forma dinámica por JavaScript -->
 						</tbody>
 					</table>
 				</div>
@@ -182,7 +181,7 @@
 				<span
 					class="display-1 display-1--subtitle"
 					id="ordenaCarrito"
-					title="Mostrar el contenido del carrito ordenado por artículo a través del console.log"
+					title="Mostrar el contenido del carrito ordenado por artículo"
 				>
 					Ordenar Carrito por nombre 🛒⬆
 				</span>

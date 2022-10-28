@@ -774,7 +774,9 @@ puede hacer hover*/
   color: black;
 }
 
-#verCarrito, #ordenaCarrito, #vaciaCarrito {
+#verCarrito,
+#ordenaCarrito,
+#vaciaCarrito {
   cursor: pointer;
   width: 100%;
   align-self: center;
@@ -784,6 +786,12 @@ puede hacer hover*/
   font-weight: 700;
   cursor: pointer;
   color: red;
+}
+
+.agregarUnidad, .quitarUnidad {
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff7ef;
 }
 
 /*# sourceMappingURL=style.css.map */

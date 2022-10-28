@@ -29,9 +29,15 @@ const tableCart = (cartItem) => {
 								).toLocaleString("locale", {
 									style: "currency",
 									currency: "ARS",
-									maximumFractionDigits: 0
+									maximumFractionDigits: 0,
 								})}</td>
-                <td>${cartItem.cantidad}</td>
+                <td><span class="agregarUnidad" id="${
+									cartItem.articulo
+								}" title="Agregar 1">➕</span>   ${
+		cartItem.cantidad
+	}   <span class="quitarUnidad" id="${
+		cartItem.articulo
+	}" title="Quitar 1">➖</span></td>
                 <td><span class="eliminarProducto" id="${
 									cartItem.articulo
 								}" title="Haga click para eliminar '${
