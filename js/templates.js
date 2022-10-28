@@ -22,9 +22,21 @@ const returnError = () => {
 const tableCart = (cartItem) => {
 	return `<tr>
                 <th scope="row">${cartItem.title}</th>
-                <td>${(cartItem.precio * cartItem.cantidad * IVA).toLocaleString()}</td>
+                <td>${(
+									cartItem.precio *
+									cartItem.cantidad *
+									IVA
+								).toLocaleString("locale", {
+									style: "currency",
+									currency: "ARS",
+									maximumFractionDigits: 0
+								})}</td>
                 <td>${cartItem.cantidad}</td>
-                <td><span class="eliminarProducto" id="${cartItem.articulo}" title="Haga click para eliminar '${cartItem.title}' del carrito">X</span></td>
+                <td><span class="eliminarProducto" id="${
+									cartItem.articulo
+								}" title="Haga click para eliminar '${
+		cartItem.title
+	}' del carrito">X</span></td>
             </tr>`;
 };
 
