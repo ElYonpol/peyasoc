@@ -181,6 +181,7 @@ function ordenarCarrito() {
 			return 0;
 		});
 		mostrarCarrito();
+		saveCart();
 		toast(
 			"Carrito ordenado",
 			3000,
