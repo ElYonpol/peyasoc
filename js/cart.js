@@ -226,11 +226,11 @@ const deleteCartItem = (servicioEliminar) => {
 //Función para ordenar los productos del carrito por el nombre del servicio
 function ordenarCarrito() {
 	if (cart.length !== 0) {
-		let carritoOrdenado = cart.sort((a, b) => {
-			if (a.articulo > b.articulo) {
+		let carritoOrdenado = cart.sort((firstItem, secondItem) => {
+			if (firstItem.articulo > secondItem.articulo) {
 				return 1;
 			}
-			if (a.articulo < b.articulo) {
+			if (firstItem.articulo < secondItem.articulo) {
 				return -1;
 			}
 			return 0;
