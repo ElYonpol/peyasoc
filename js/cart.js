@@ -41,14 +41,8 @@ const activateCartItemButtons = () => {
 //Función para mostrar los contenidos del carrito de compras
 const loadCart = () => {
 	if (localStorage.getItem("cart")) {
-		let loadedCart = JSON.parse(localStorage.getItem("cart"));
+		let loadedCart = JSON.parse(localStorage.getItem("cart")) || [];
 		loadedCart.forEach((product) => cart.push(product));
-	} else {
-		toast(
-			"Actualmente no hay productos en el carrito.",
-			3000,
-			"linear-gradient(to right, #6f756b, #96c93d)"
-		);
 	}
 };
 loadCart();
