@@ -4,7 +4,7 @@ const cart = [];
 //Genero las variables en las que voy a acumular el total de la compra
 let compraTotalConIVA = 0;
 
-//Llamo al DOM para conectarme con los botones de "Agregar al carrito"
+//Llamo al DOM para conectarme con los botones de "Agregar al carrito" y "Comprar"
 //y le agrego el EVENT Listener
 const activateCartButtons = () => {
 	const addButtons = document.querySelectorAll(".button-cart");
@@ -12,6 +12,13 @@ const activateCartButtons = () => {
 		btn.addEventListener("click", () => {
 			addToCart(btn.id);
 		});
+	});
+};
+
+const goToPurchase = () => {
+	const purchaseCartBtn = document.querySelector("#button-purchase");
+	purchaseCartBtn.addEventListener("click", () => {
+		endPurchase();
 	});
 };
 
@@ -38,7 +45,7 @@ const activateCartItemButtons = () => {
 	});
 };
 
-//Función para mostrar los contenidos del carrito de compras
+//Función para cargar los contenidos del carrito de compras, si existe en localStorage
 const loadCart = () => {
 	if (localStorage.getItem("cart")) {
 		let loadedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -51,6 +58,7 @@ loadCart();
 const showTable = document.querySelector("#cartTable");
 const showUserCart = document.querySelector(".userCart");
 
+//Función para mostrar los contenidos del carrito de compras
 const mostrarCarrito = () => {
 	showUserCart.innerHTML = "";
 	if (cart.length !== 0) {
@@ -64,17 +72,17 @@ const mostrarCarrito = () => {
 			0
 		);
 
-		showUserCart.innerHTML += `<tr class="fw-bold">
+		showUserCart.innerHTML += `<tr class="fw-bold align-middle">
 				<th scope="row">Total</th>
 				<td>${compraTotalConIVA.toLocaleString("locale", {
 					style: "currency",
 					currency: "ARS",
 					maximumFractionDigits: 0,
 				})}</td>
-				<td></td>
-				<td></td>
+				<td colspan="2"><button class="button-cart__purchase" id="button-purchase" title="Haga click para comprar los productos del carrito">Comprar</button></td>
 			</tr>`;
 		activateCartItemButtons();
+		goToPurchase();
 	} else {
 		alerta("Error", "Atención: el carrito está vacío.", "error");
 	}
@@ -95,14 +103,31 @@ const vaciaCarrito = document.querySelector("span#vaciaCarrito");
 vaciaCarrito.addEventListener("click", vaciarCarrito);
 
 //Recorro el array de productos y armo las cards para cargarlas en pantalla
-const loadCards = () => {
+//Usando ASINCRONISMO
+const loadCards = async () => {
 	containerServicios.innerHTML = "";
-	products.forEach(
-		(producto) => (containerServicios.innerHTML += returnCard(producto))
-	);
+	products = await traerProductos();
+	console.log(products);
+	if (products !== "Error" && products !== "Not found" && products.length > 0) {
+		products.forEach(
+			(product) => (containerServicios.innerHTML += returnCard(product))
+		);
+	} else {
+		containerServicios.innerHTML = returnError();
+	}
 	activateCartButtons(); //Llamo a la función para activar los botones de agregar servicios al carrito
 };
 loadCards();
+
+//Javascript sincrónico tradicional
+/* const loadCards = () => {
+	containerServicios.innerHTML = "";
+	products.forEach(
+		(product) => (containerServicios.innerHTML += returnCard(product))
+	);
+	activateCartButtons(); //Llamo a la función para activar los botones de agregar servicios al carrito
+};
+loadCards(); */
 
 //Función para ir agregando servicios al carrito de compras
 const addToCart = (servicio) => {
@@ -112,7 +137,7 @@ const addToCart = (servicio) => {
 	if (result !== undefined) {
 		if (cartItemExists !== undefined) {
 			//cartItemExists.cantidad++;
-			addUnitCartItem(servicio)
+			addUnitCartItem(servicio);
 		} else {
 			result.cantidad = 1;
 			cart.push(result);
@@ -266,3 +291,9 @@ const saveCart = () => {
 		localStorage.setItem("cart", JSON.stringify(cart));
 	}
 };
+
+//Función para finalizar la compra, vaciar el carrito y avisar al usuario
+const endPurchase =() =>{
+	alertaCompra("Muchas gracias por su compra.")
+	vaciarCarrito()
+}

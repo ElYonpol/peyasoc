@@ -757,7 +757,7 @@ puede hacer hover*/
     transition-delay: 500ms;
   }
 }
-.button-cart {
+.button-cart, .button-cart__purchase {
   cursor: pointer;
   display: inline-block;
   text-decoration: none;

@@ -1,3 +1,21 @@
+//Genero un objeto productos vacío y la URL de MOCKAPI para usarlo luego en la
+//función correspondiente
+let products = [];
+const URL = "https://635d78e707076ac24f3dbf4a.mockapi.io/productos";
+localStorage.removeItem("products");
+
+//Me conecto con MOCKAPI para traer el listado de productos remoto
+const traerProductos = async () => {
+	try {
+		const respuesta = await fetch(URL);
+		datos = await respuesta.json();
+		localStorage.setItem("products", JSON.stringify(datos));
+		return datos;
+	} catch (error) {
+		return "Error";
+	}
+};
+
 //Templates generales para armar la estructura HTML con JavaScript
 const returnCard = (product) => {
 	return `<div class="cartCard ${product.claseCSS}">
@@ -57,6 +75,24 @@ const alerta = (titulo, mensaje, icono) => {
 		//showCancelButton: true,
 		//timer: 1500,
 		width: "250px",
+	});
+};
+
+const alertaCompra = (mensaje) => {
+	Swal.fire({
+		title: mensaje || "",
+		showDenyButton: true,
+		//showCancelButton: true,
+		confirmButtonColor: "#96c93d",
+		denyButtonColor:"#f88a02",
+		confirmButtonText: "Continuar comprando",
+		denyButtonText: "Ir a Inicio",
+	}).then((result) => {
+		if (result.isConfirmed) {
+			location.href = "../pages/compras.html";
+		} else if (result.isDenied) {
+			location.href = "../index.html";
+		}
 	});
 };
 
