@@ -52,10 +52,16 @@
 		@include bkg_img("../images/cartCard--6.webp");
 	}
 
+	&--nuevo {
+		@include bkg_img("../images/cartCard--nuevo.webp");
+		min-width: 280px;
+	}
+
 	&-content {
 		padding: 1rem;
 		background: linear-gradient(black, rgba(0, 0, 0, 0.5));
 		align-self: flex-end;
+		min-width: 280px;
 
 		&__title {
 			font-weight: 700;
@@ -90,7 +96,8 @@ puede hacer hover*/
 	}
 }
 
-.button-cart, .button-cart__purchase {
+.button-cart,
+.button-cart__purchase {
 	cursor: pointer;
 	display: inline-block;
 	text-decoration: none;
@@ -109,9 +116,10 @@ puede hacer hover*/
 
 #verCarrito,
 #ordenaCarrito,
-#vaciaCarrito {
+#vaciaCarrito,
+#agregarProducto {
 	cursor: pointer;
-	width: 100%;
+	width: fit-content;
 	align-self: center;
 }
 
@@ -121,8 +129,9 @@ puede hacer hover*/
 	color: red;
 }
 
-.agregarUnidad , .quitarUnidad {
+.agregarUnidad,
+.quitarUnidad {
 	font-weight: 700;
 	cursor: pointer;
-	color:map-get($colors , color-cremita);
+	color: map-get($colors , color-cremita);
 }

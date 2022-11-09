@@ -84,7 +84,7 @@ const alertaCompra = (mensaje) => {
 		showDenyButton: true,
 		//showCancelButton: true,
 		confirmButtonColor: "#96c93d",
-		denyButtonColor:"#f88a02",
+		denyButtonColor: "#f88a02",
 		confirmButtonText: "Continuar comprando",
 		denyButtonText: "Ir a Inicio",
 	}).then((result) => {
