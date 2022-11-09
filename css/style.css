@@ -776,7 +776,9 @@ puede hacer hover*/
 }
 
 .button-cart:hover,
-.button-cart:focus {
+.button-cart:focus,
+.button-cart__purchase:hover,
+.button-cart__purchase:focus {
   background-color: #fff7ef;
   color: black;
 }
