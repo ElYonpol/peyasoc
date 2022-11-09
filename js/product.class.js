@@ -48,9 +48,9 @@ const agregoProducto = async () => {
 		preConfirm: () => {
 			return [
 				(id = parseInt(Math.random() * 1000)),
-				(articulo = document.getElementById("swal-articulo").value),
-				(title = document.getElementById("swal-title").value),
-				(body = document.getElementById("swal-body").value),
+				(articulo = document.getElementById("swal-articulo").value.trim()),
+				(title = document.getElementById("swal-title").value.trim()),
+				(body = document.getElementById("swal-body").value.trim()),
 				(precio = parseInt(document.getElementById("swal-precio").value)),
 			];
 		},
@@ -65,17 +65,17 @@ const agregoProducto = async () => {
 		) {
 			const nuevoproducto = new Product(id, articulo, title, body, precio);
 			let result = products.find(
-                (prod) => prod.articulo === nuevoproducto.articulo
-                );
-                if (result === undefined) {
-                    products.push(nuevoproducto);
-                    containerServicios.innerHTML += returnCard(nuevoproducto);
-                    activateCartButtons();
-                toast(
-                    `${nuevoproducto.title} se agregó a la base de datos.`,
-                    3000,
-                    "linear-gradient(to right, #00b09b, #96c93d)"
-                );
+				(prod) => prod.articulo === nuevoproducto.articulo
+			);
+			if (result === undefined) {
+				products.push(nuevoproducto);
+				containerServicios.innerHTML += returnCard(nuevoproducto);
+				activateCartButtons();
+				toast(
+					`${nuevoproducto.title} se agregó a la base de datos. Ya se puede agregar a la compra`,
+					3000,
+					"linear-gradient(to right, #00b09b, #96c93d)"
+				);
 			} else {
 				alerta(
 					"Error",
