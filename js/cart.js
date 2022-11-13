@@ -107,7 +107,6 @@ vaciaCarrito.addEventListener("click", vaciarCarrito);
 const loadCards = async () => {
 	containerServicios.innerHTML = "";
 	products = await traerProductos();
-	console.log(products);
 	if (products !== "Error" && products !== "Not found" && products.length > 0) {
 		products.forEach(
 			(product) => (containerServicios.innerHTML += returnCard(product))
