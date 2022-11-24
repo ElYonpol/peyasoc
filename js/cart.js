@@ -135,7 +135,6 @@ const addToCart = (servicio) => {
 
 	if (result !== undefined) {
 		if (cartItemExists !== undefined) {
-			//cartItemExists.cantidad++;
 			addUnitCartItem(servicio);
 		} else {
 			result.cantidad = 1;
