@@ -1,6 +1,6 @@
 //Función Constructora para la página de e-commerce
 
-class Product {
+/* class Product {
 	constructor(id, articulo, title, body, precio) {
 		this.id = id;
 		this.articulo = articulo;
@@ -95,4 +95,4 @@ const agregoProducto = async () => {
 			agregoProducto();
 		}, 1500);
 	}
-};
+}; */
