@@ -3,7 +3,7 @@ const IVA = 1.21;
 //Genero 7 artículos de prueba para la página de e-commerce
 
 //Comento lo siguiente para aplicar ASINCRONISMO
-/*
+
 const products = [
 	{
 		articulo: "blanquea",
@@ -62,4 +62,4 @@ const products = [
 		cantidad: 0,
 	},
 ];
-*/
+

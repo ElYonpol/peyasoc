@@ -1,5 +1,7 @@
 //Función Constructora para la página de e-commerce
 
+//Comento porque lo saco del asincronismo
+/* 
 class Product {
 	constructor(id, articulo, title, body, precio) {
 		this.id = id;
@@ -96,3 +98,4 @@ const agregoProducto = async () => {
 		}, 1500);
 	}
 };
+ */
