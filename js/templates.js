@@ -1,11 +1,11 @@
 //Genero un objeto productos vacío y la URL de MOCKAPI para usarlo luego en la
 //función correspondiente
-let products = [];
+/* let products = [];
 const URL = "https://635d78e707076ac24f3dbf4a.mockapi.io/productos";
-localStorage.removeItem("products");
+localStorage.removeItem("products"); */
 
 //Me conecto con MOCKAPI para traer el listado de productos remoto
-const traerProductos = async () => {
+/* const traerProductos = async () => {
 	try {
 		const respuesta = await fetch(URL);
 		datos = await respuesta.json();
@@ -14,7 +14,7 @@ const traerProductos = async () => {
 	} catch (error) {
 		return "Error";
 	}
-};
+}; */
 
 //Templates generales para armar la estructura HTML con JavaScript
 const returnCard = (product) => {
