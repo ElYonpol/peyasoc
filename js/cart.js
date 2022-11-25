@@ -104,7 +104,7 @@ vaciaCarrito.addEventListener("click", vaciarCarrito);
 
 //Recorro el array de productos y armo las cards para cargarlas en pantalla
 //Usando ASINCRONISMO
-/* const loadCards = async () => {
+const loadCards = async () => {
 	containerServicios.innerHTML = "";
 	products = await traerProductos();
 	if (products !== "Error" && products !== "Not found" && products.length > 0) {
@@ -116,17 +116,17 @@ vaciaCarrito.addEventListener("click", vaciarCarrito);
 	}
 	activateCartButtons(); //Llamo a la función para activar los botones de agregar servicios al carrito
 };
-loadCards(); */
+loadCards();
 
 //Javascript sincrónico tradicional
-const loadCards = () => {
+/* const loadCards = () => {
 	containerServicios.innerHTML = "";
 	products.forEach(
 		(product) => (containerServicios.innerHTML += returnCard(product))
 	);
 	activateCartButtons(); //Llamo a la función para activar los botones de agregar servicios al carrito
 };
-loadCards();
+loadCards(); */
 
 //Función para ir agregando servicios al carrito de compras
 const addToCart = (servicio) => {
@@ -135,6 +135,7 @@ const addToCart = (servicio) => {
 
 	if (result !== undefined) {
 		if (cartItemExists !== undefined) {
+			//cartItemExists.cantidad++;
 			addUnitCartItem(servicio);
 		} else {
 			result.cantidad = 1;
@@ -196,7 +197,6 @@ const removeUnitCartItem = (itemQuitar) => {
 
 //Función para eliminar un item del carrito
 const deleteCartItem = (servicioEliminar) => {
-	//debugger;
 	if (cart.length === 1) {
 		vaciarCarrito();
 	} else {
@@ -291,7 +291,7 @@ const saveCart = () => {
 };
 
 //Función para finalizar la compra, vaciar el carrito y avisar al usuario
-const endPurchase =() =>{
-	alertaCompra("Muchas gracias por su compra.")
-	vaciarCarrito()
-}
+const endPurchase = () => {
+	alertaCompra("Muchas gracias por su compra.");
+	vaciarCarrito();
+};
