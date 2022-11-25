@@ -135,7 +135,6 @@ const addToCart = (servicio) => {
 
 	if (result !== undefined) {
 		if (cartItemExists !== undefined) {
-			//cartItemExists.cantidad++;
 			addUnitCartItem(servicio);
 		} else {
 			result.cantidad = 1;
@@ -197,7 +196,6 @@ const removeUnitCartItem = (itemQuitar) => {
 
 //Función para eliminar un item del carrito
 const deleteCartItem = (servicioEliminar) => {
-	//debugger;
 	if (cart.length === 1) {
 		vaciarCarrito();
 	} else {
